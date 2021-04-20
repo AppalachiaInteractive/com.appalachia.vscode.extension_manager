@@ -11,6 +11,8 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 6d01520 | 2021-04-20 | Chris Schubert | Updating package.json |
+| b549e7f | 2021-04-20 | Chris Schubert | Reorganizing project structure |
 | 25b253d | 2021-04-20 | Chris Schubert | Adding new licensing terms and describing Aapache License v2 compliance |
 | 310e179 | 2021-04-20 | Chris Schubert | Updating license to declare project changes and adding modification log |
 | 7c88415 | 2021-04-07 | Joel Spadin | v1.5.0 |
@@ -62,7 +64,7 @@
 | cc8ea80 | 2020-07-08 | Joel Spadin | Merge pull request #18 from joelspadin-garmin/npm-upgrade |
 
 
- ## Tag: v1.3.0-beta.0 npm-upgrade
+ ## Tag: v1.3.0-beta.0
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
 | 6ddad4b | 2020-06-30 | Joel Spadin | v1.3.0-beta.0 |
