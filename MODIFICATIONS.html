@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Diff</title>
+	<style>
+	body {
+		text-align: center;
+	}
+	#wrapper {
+		display: inline-block;
+		margin-top: 1em;
+		min-width: 800px;
+		text-align: left;
+	}
+	h2 {
+		background: #fafafa;
+		background: -moz-linear-gradient(#fafafa, #eaeaea);
+		background: -webkit-linear-gradient(#fafafa, #eaeaea);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+		border: 1px solid #d8d8d8;
+		border-bottom: 0;
+		color: #555;
+		font: 14px sans-serif;
+		overflow: hidden;
+		padding: 10px 6px;
+		text-shadow: 0 1px 0 white;
+		margin: 0;
+	}
+	.copy {
+		float: right;
+	}
+	.file-diff {
+		border: 1px solid #d8d8d8;
+		margin-bottom: 1em;
+		overflow: auto;
+		padding: 0.5em 0;
+	}
+	.file-diff > div {
+		width: 100%;
+	}
+	pre {
+		margin: 0;
+		font-family: "Bitstream Vera Sans Mono", Courier, monospace;
+		font-size: 12px;
+		line-height: 1.4em;
+		text-indent: 0.5em;
+	}
+	.file {
+		color: #aaa;
+	}
+	.delete {
+		background-color: #fdd;
+	}
+	.insert {
+		background-color: #dfd;
+	}
+	.info {
+		color: #a0b;
+	}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+<h2>LICENSE.md<button class='copy' onclick='navigator.clipboard.writeText("LICENSE.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/LICENSE.md b/LICENSE.md</pre>
+<pre class='undefined'>new file mode 100644</pre>
+<pre class='file'>index 0000000..92f1dfa</pre>
+<pre class='delete'>--- /dev/null</pre>
+<pre class='insert'>+++ b/LICENSE.md</pre>
+<pre class='info'>@@ -0,0 +1,39 @@</pre>
+<pre class='insert'>+This project contains 2 licenses.  All software commited at or before commit hash 7c88415ff673fa83762ca4790aa7de68811622f6 is licensed under the Apache License, version 2.0 by Garmin International and/or the individual contributors, which this project history will show.  All work after commit 7c88415ff673fa83762ca4790aa7de68811622f6 is licensed under the MIT License by Appalachia Interactive.  Both license notices are below.  In adherence with the Apache License, version 2.0, modifications to the original Garmin International project will be noted in MODIFICATIONS.md.</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+MIT License</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Copyright (c) 2021 Appalachia Interactive</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Permission is hereby granted, free of charge, to any person obtaining a copy</pre>
+<pre class='insert'>+of this software and associated documentation files (the "Software"), to deal</pre>
+<pre class='insert'>+in the Software without restriction, including without limitation the rights</pre>
+<pre class='insert'>+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</pre>
+<pre class='insert'>+copies of the Software, and to permit persons to whom the Software is</pre>
+<pre class='insert'>+furnished to do so, subject to the following conditions:</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+The above copyright notice and this permission notice shall be included in all</pre>
+<pre class='insert'>+copies or substantial portions of the Software.</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</pre>
+<pre class='insert'>+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</pre>
+<pre class='insert'>+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</pre>
+<pre class='insert'>+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</pre>
+<pre class='insert'>+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</pre>
+<pre class='insert'>+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</pre>
+<pre class='insert'>+SOFTWARE.</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Apache License, Version 2.0</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Copyright 2021 Garmin International</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Licensed under the Apache License, Version 2.0 (the "License");</pre>
+<pre class='insert'>+you may not use this file except in compliance with the License.</pre>
+<pre class='insert'>+You may obtain a copy of the License at</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+http://www.apache.org/licenses/LICENSE-2.0</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+Unless required by applicable law or agreed to in writing, software</pre>
+<pre class='insert'>+distributed under the License is distributed on an "AS IS" BASIS,</pre>
+<pre class='insert'>+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express</pre>
+<pre class='insert'>+or implied. See the License for the specific language governing</pre>
+<pre class='insert'>+permissions and limitations under the License.</pre></div></div><h2>modifications.sh<button class='copy' onclick='navigator.clipboard.writeText("modifications.sh")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/modifications.sh b/modifications.sh</pre>
+<pre class='undefined'>new file mode 100644</pre>
+<pre class='file'>index 0000000..b3cc370</pre>
+<pre class='delete'>--- /dev/null</pre>
+<pre class='insert'>+++ b/modifications.sh</pre>
+<pre class='info'>@@ -0,0 +1,7 @@</pre>
+<pre class='insert'>+#!/bin/bash</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+if [ -f MODIFICATIONS.md ] ; then rm MODIFICATIONS.md; fi</pre>
+<pre class='insert'>+if [ -f MODIFICATIONS.html ] ; then rm MODIFICATIONS.html; fi</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+html-diff 7c88415ff673fa83762ca4790aa7de68811622f6 &gt; MODIFICATIONS.html</pre>
+<pre class='insert'>+</pre></div></div>
+</div>
+</body>
+</html>
+
