@@ -1,0 +1,1 @@
+echo `git log 7c88415ff673fa83762ca4790aa7de68811622f6..HEAD` > MODIFICATIONS.md
