@@ -3,32 +3,45 @@
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
     "version": "1.5.0",
-    "publisher": "garmin",
-    "license": "Apache-2.0",
+    "engines": {
+      "vscode": "^1.55.0"
+    },
+    "categories": [
+      "Other"
+    ],
     "author": {
-        "name": "Garmin International"
+      "name": "Appaclachia Interactive"
+    },
+    "publisher": "appalachia",
+    "keywords": [
+        "Scripts",
+        "Tool",
+        "git",
+        "diff"
+      ],
+    "icon": "media/icon.png",
+    "publishConfig": {
+        "registry": "http://localhost:4873/"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/joelspadin-garmin/vscode-private-extension-manager.git",
-        "directory": "extension"
+        "url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager.git"
     },
-    "engines": {
-        "vscode": "^1.51.0"
-    },
+    "homepage": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff",
+    "bugs": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff/issues",
+    "licenses": [
+        {
+          "type": "MIT",
+          "url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/blob/master/LICENSE.md"
+        },
+        {
+          "type": "Apache-2.0",
+          "url": "https://raw.githubusercontent.com/joelspadin-garmin/vscode-private-extension-manager/master/extension/LICENSE"
+        }
+      ],
     "extensionKind": [
         "workspace",
         "web"
-    ],
-    "extensionPack": [
-        "garmin.private-extension-manager-remote-helper"
-    ],
-    "icon": "media/icon.png",
-    "categories": [
-        "Other"
-    ],
-    "keywords": [
-        "multi-root-ready"
     ],
     "activationEvents": [
         "workspaceContains:.vscode/extensions.private.json",
@@ -294,15 +307,18 @@
     },
     "scripts": {
         "vscode:prepublish": "npm run package",
-        "clean": "rimraf ./dist ./out",
+        "preversion": "bash ~/com.appalachia/appa/appa package preversion",
+        "version": "bash ~/com.appalachia/appa/appa package version",
+        "postversion": "bash ~/com.appalachia/appa/appa package postversion-vscode",
         "compile": "webpack",
         "watch": "webpack --watch",
         "package": "webpack --mode production --devtool hidden-source-map",
         "test-compile": "tsc -p ./",
+        "test-watch": "tsc -watch -p ./",
         "pretest": "npm run test-compile && npm run lint",
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js"
-    },
+      },
     "devDependencies": {
         "@types/cacache": "^12.0.1",
         "@types/chai": "^4.2.14",
