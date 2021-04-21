@@ -11,6 +11,12 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+
+
+ ## Tag: v1.5.3
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 1e0af7f | 2021-04-21 | Chris Schubert | 1.5.3 |
 | 820c6a8 | 2021-04-21 | Chris Schubert | Testing new setup |
 
 
