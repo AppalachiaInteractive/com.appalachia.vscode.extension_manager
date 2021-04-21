@@ -8,7 +8,7 @@
 ```
 
 
-# 1.5.7
+# 1.5.8
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
-
+| 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |
