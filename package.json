@@ -27,8 +27,8 @@
         "type": "git",
         "url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager.git"
     },
-    "homepage": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff",
-    "bugs": "https://github.com/AppalachiaInteractive/com.appalachia.node.html-diff/issues",
+    "homepage": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager",
+    "bugs": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/issues",
     "licenses": [
         {
             "type": "MIT",
