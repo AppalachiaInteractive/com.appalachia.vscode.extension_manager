@@ -1,8 +1,8 @@
 {
-    "name": "private-extension-manager",
+    "name": "extension_manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "engines": {
         "vscode": "^1.55.0"
     },

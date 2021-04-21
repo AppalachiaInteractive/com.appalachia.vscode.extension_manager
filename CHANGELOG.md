@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 48fd900 | 2021-04-20 | Chris Schubert | Adding webpack |
+
+
+ ## Tag: v1.5.1
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| ba8df7a | 2021-04-20 | Chris Schubert | 1.5.1 |
 | 6d01520 | 2021-04-20 | Chris Schubert | Updating package.json |
 | b549e7f | 2021-04-20 | Chris Schubert | Reorganizing project structure |
 | 25b253d | 2021-04-20 | Chris Schubert | Adding new licensing terms and describing Aapache License v2 compliance |
