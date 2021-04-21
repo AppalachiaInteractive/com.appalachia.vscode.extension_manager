@@ -1,5 +1,5 @@
 {
-    "name": "extension_manager",
+    "name": "com.appalachia.vscode.extension_manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
     "version": "1.5.2",
@@ -9,10 +9,6 @@
     "categories": [
         "Other"
     ],
-    "author": {
-        "name": "Appaclachia Interactive"
-    },
-    "publisher": "appalachia",
     "keywords": [
         "Scripts",
         "Tool",
@@ -20,6 +16,10 @@
         "diff"
     ],
     "icon": "media/icon.png",
+    "author": {
+        "name": "Appaclachia Interactive"
+    },
+    "publisher": "appalachia",
     "publishConfig": {
         "registry": "http://localhost:4873/"
     },
@@ -32,13 +32,28 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/blob/master/LICENSE.md"
+            "url": "https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/blob/main/LICENSE.md"
         },
         {
             "type": "Apache-2.0",
             "url": "https://raw.githubusercontent.com/joelspadin-garmin/vscode-private-extension-manager/master/extension/LICENSE"
         }
     ],
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "preversion": "bash ~/com.appalachia/appa/appa package preversion",
+        "version": "bash ~/com.appalachia/appa/appa package version",
+        "postversion": "bash ~/com.appalachia/appa/appa package postversion-vscode",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "test-compile": "tsc -p ./",
+        "test-watch": "tsc -watch -p ./",
+        "pretest": "npm run test-compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "main": "./dist/extension.js",
     "extensionKind": [
         "workspace",
         "web"
@@ -55,7 +70,6 @@
         "onCommand:privateExtensions.registry.add",
         "onCommand:privateExtensions.registry.remove"
     ],
-    "main": "./dist/extension.js",
     "contributes": {
         "jsonValidation": [
             {
@@ -304,20 +318,6 @@
                 }
             ]
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run package",
-        "preversion": "bash ~/com.appalachia/appa/appa package preversion",
-        "version": "bash ~/com.appalachia/appa/appa package version",
-        "postversion": "bash ~/com.appalachia/appa/appa package postversion-vscode",
-        "compile": "webpack",
-        "watch": "webpack --watch",
-        "package": "webpack --mode production --devtool hidden-source-map",
-        "test-compile": "tsc -p ./",
-        "test-watch": "tsc -watch -p ./",
-        "pretest": "npm run test-compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
         "@types/cacache": "^12.0.1",

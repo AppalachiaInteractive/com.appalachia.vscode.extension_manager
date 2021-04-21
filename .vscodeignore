@@ -1,3 +1,14 @@
+.dist
+.env
+.private
+.test
+.venv
+.vscode-test
+*.vsix
+*/.private/*
+dist
+node_modules
+out
 # Ignore vscode settings for development
 .vscode/**
 

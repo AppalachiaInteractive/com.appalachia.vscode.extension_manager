@@ -1,8 +1,14 @@
+.dist
+.env
+.private
+.test
+.venv
 .vscode-test
-dist
-out
-node_modules
 *.vsix
+*/.private/*
+dist
+node_modules
+out
 
 # Keep only specific VS Code files. Others such as settings.json often contain
 # data specific to a developer's machine or preferences.
