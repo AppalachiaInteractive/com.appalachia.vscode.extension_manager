@@ -9,7 +9,7 @@ import { getNpmCacheDir, rimrafPromise } from '../util';
 const localize = nls.loadMessageBundle();
 
 export class DeleteCacheCommand implements Command {
-    public readonly id = 'privateExtensions.cache.delete';
+    public readonly id = 'com-appalachia-vscode-extension-manager.cache.delete';
 
     public async execute(): Promise<void> {
         const cache = getNpmCacheDir();
@@ -36,7 +36,7 @@ export class DeleteCacheCommand implements Command {
  * Cleans and fixes up the NPM cache.
  */
 export class GarbageCollectCacheCommand implements Command {
-    public readonly id = 'privateExtensions.cache.garbageCollect';
+    public readonly id = 'com-appalachia-vscode-extension-manager.cache.garbageCollect';
 
     public async execute(): Promise<void> {
         const cache = getNpmCacheDir();

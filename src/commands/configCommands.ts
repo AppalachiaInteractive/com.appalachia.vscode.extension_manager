@@ -11,7 +11,7 @@ import { pickWorkspaceFolder } from '../workspace';
  * Opens extensions.private.json to the "registries" element.
  */
 export class ConfigureWorkspaceRegistries implements Command {
-    public readonly id = 'privateExtensions.configureWorkspaceRegistries';
+    public readonly id = 'com-appalachia-vscode-extension-manager.configureWorkspaceRegistries';
 
     public async execute(): Promise<void> {
         await openExtensionsFileToElement('registries');
@@ -22,7 +22,7 @@ export class ConfigureWorkspaceRegistries implements Command {
  * Opens extensions.private.json to the "recommendations" element.
  */
 export class ConfigureRecommendedExtensions implements Command {
-    public readonly id = 'privateExtensions.configureRecommendedExtensions';
+    public readonly id = 'com-appalachia-vscode-extension-manager.configureRecommendedExtensions';
 
     public async execute(): Promise<void> {
         await openExtensionsFileToElement('recommendations');

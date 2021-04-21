@@ -182,7 +182,7 @@ all available packages, so you may need to set `query` to get any results at all
 ### User Configuration
 
 Each user may also specify registries to use regardless of which workspace is
-open with the `privateExtensions.registries` setting. This has the same format
+open with the `com-appalachia-vscode-extension-manager.registries` setting. This has the same format
 as the `registries` array in `extensions.private.json`.
 
 You can use the **Private Extensions: Add Registry...** and
@@ -201,13 +201,13 @@ To switch release channels for an extension, install the extension, then
 right-click it in the extensions list and select **Switch Release Channels...**.
 Alternatively, click the **Channel** button on the extension details page.
 
-You can manually select channels with the `privateExtensions.channels` settings
+You can manually select channels with the `com-appalachia-vscode-extension-manager.channels` settings
 object. This is a dictionary where each key is an extension identifier
 (`"${publisher}.${name}"`) and each name is the dist-tag to track, as shown in
 the example below:
 
 ```JSON
-"privateExtensions.channels": {
+"com-appalachia-vscode-extension-manager.channels": {
     "garmin.example-1": "insiders", // Tracks the 'insiders' dist-tag
     "garmin.example-2": "beta",     // Tracks the 'beta' dist-tag
     "garmin.example-3": "1.0.0"     // Pins the extension to version 1.0.0
@@ -236,7 +236,7 @@ sematic versioning, such as **1.0.0-beta.0**.
 
 Private Extension Manager will periodically check your installed extensions for
 updates and notify you if any are found. You can adjust the check interval or
-disable it with the `privateExtensions.updateCheckInterval` setting.
+disable it with the `com-appalachia-vscode-extension-manager.updateCheckInterval` setting.
 
 The Private Extensions sidebar panel will also indicate any extensions with new
 versions with a green arrow. Clicking it will update the extension.

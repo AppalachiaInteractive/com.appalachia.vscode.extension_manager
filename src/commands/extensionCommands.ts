@@ -17,7 +17,7 @@ const localize = nls.loadMessageBundle();
  * Opens the extension details view for an extension.
  */
 export class ShowExtensionCommand implements Command {
-    public readonly id = 'privateExtensions.extension.show';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.show';
 
     constructor(private readonly registryView: RegistryView) {}
 
@@ -30,7 +30,7 @@ export class ShowExtensionCommand implements Command {
  * Installs an extension.
  */
 export class InstallExtensionCommand implements Command {
-    public readonly id = 'privateExtensions.extension.install';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.install';
 
     constructor(
         private readonly registryProvider: RegistryProvider,
@@ -54,7 +54,7 @@ export class InstallExtensionCommand implements Command {
  * Updates an extension to the latest version.
  */
 export class UpdateExtensionCommand implements Command {
-    public readonly id = 'privateExtensions.extension.update';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.update';
 
     constructor(
         private readonly registryProvider: RegistryProvider,
@@ -85,7 +85,7 @@ export class UpdateExtensionCommand implements Command {
  * Uninstalls an extension.
  */
 export class UninstallExtensionCommand implements Command {
-    public readonly id = 'privateExtensions.extension.uninstall';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.uninstall';
 
     constructor(private readonly extensionInfo: ExtensionInfoService) {}
 
@@ -110,7 +110,7 @@ export class UninstallExtensionCommand implements Command {
  * Installs a specific version of an extension.
  */
 export class InstallAnotherVersionCommand implements Command {
-    public readonly id = 'privateExtensions.extension.install.anotherVersion';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.install.anotherVersion';
 
     constructor(private readonly registryProvider: RegistryProvider) {}
 
@@ -178,7 +178,7 @@ export class InstallAnotherVersionCommand implements Command {
  * Switches which release channel to track for an extension.
  */
 export class SwitchChannelsCommand implements Command {
-    public readonly id = 'privateExtensions.extension.switchChannels';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.switchChannels';
 
     constructor(private readonly registryProvider: RegistryProvider) {}
 
@@ -274,7 +274,7 @@ export class SwitchChannelsCommand implements Command {
  * Copies extension information to the clipboard.
  */
 export class CopyExtensionInformationCommand implements Command {
-    public readonly id = 'privateExtensions.extension.copyInformation';
+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.copyInformation';
 
     public async execute(extension: Package): Promise<void> {
         const name = localize('extensionInfoName', 'Name: {0}', extension.displayName);

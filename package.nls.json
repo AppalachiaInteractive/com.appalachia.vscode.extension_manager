@@ -18,11 +18,11 @@
     "command.extension.switchChannels.title": "Switch Release Channels...",
     "command.registry.add.title": "Add User Registry...",
     "command.registry.remove.title": "Remove User Registry",
-    "viewsContainers.activitybar.privateExtensions.title": "Private Extensions",
-    "views.privateExtensions.extensions.name": "Extensions",
-    "views.privateExtensions.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/joelspadin-garmin/vscode-private-extension-manager/tree/master/extension#readme)",
-    "views.privateExtensions.extensions.configure": "[Configure Workspace Registries](command:privateExtensions.configureWorkspaceRegistries)",
-    "views.privateExtensions.recommended.name": "Recommended",
-    "views.privateExtensions.recommended.noExtensions": "No recommended extensions found.",
-    "views.privateExtensions.recommended.configure": "[Configure Recommended Extensions](command:privateExtensions.configureRecommendedExtensions)"
+    "viewsContainers.activitybar.com-appalachia-vscode-extension-manager.title": "Private Extensions",
+    "views.com-appalachia-vscode-extension-manager.extensions.name": "Extensions",
+    "views.com-appalachia-vscode-extension-manager.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/joelspadin-garmin/vscode-private-extension-manager/tree/master/extension#readme)",
+    "views.com-appalachia-vscode-extension-manager.extensions.configure": "[Configure Workspace Registries](command:com-appalachia-vscode-extension-manager.configureWorkspaceRegistries)",
+    "views.com-appalachia-vscode-extension-manager.recommended.name": "Recommended",
+    "views.com-appalachia-vscode-extension-manager.recommended.noExtensions": "No recommended extensions found.",
+    "views.com-appalachia-vscode-extension-manager.recommended.configure": "[Configure Recommended Extensions](command:com-appalachia-vscode-extension-manager.configureRecommendedExtensions)"
 }

@@ -2,7 +2,7 @@ import { Command } from '../commandManager';
 import { RegistryView } from '../views/registryView';
 
 export class RefreshCommand implements Command {
-    public readonly id = 'privateExtensions.refresh';
+    public readonly id = 'com-appalachia-vscode-extension-manager.refresh';
 
     constructor(private readonly registryView: RegistryView) {}
 

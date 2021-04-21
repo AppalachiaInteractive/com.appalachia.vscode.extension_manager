@@ -46,7 +46,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
             // Refresh on changes to release channels, as the channel for the
             // displayed extension may have changed.
             vscode.workspace.onDidChangeConfiguration((e) => {
-                if (e.affectsConfiguration('privateExtensions.channels')) {
+                if (e.affectsConfiguration('com-appalachia-vscode-extension-manager.channels')) {
                     this.refresh();
                 }
             }),
@@ -228,7 +228,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                 actions,
                 'prominent update',
                 localize('update.to.version', 'Update to {0}', this.pkg.version.toString()),
-                'privateExtensions.extension.update',
+                'com-appalachia-vscode-extension-manager.extension.update',
                 this.pkg.extensionId,
             );
         }
@@ -238,7 +238,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                 actions,
                 'uninstall',
                 localize('uninstall', 'Uninstall'),
-                'privateExtensions.extension.uninstall',
+                'com-appalachia-vscode-extension-manager.extension.uninstall',
                 this.pkg.extensionId,
             );
 
@@ -250,7 +250,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                     actions,
                     'channel',
                     localize('extension.channel', 'Channel: {0}', channel),
-                    'privateExtensions.extension.switchChannels',
+                    'com-appalachia-vscode-extension-manager.extension.switchChannels',
                     this.pkg.extensionId,
                 );
             }
@@ -360,7 +360,7 @@ async function addInstallButton(actions: string[], pkg: Package) {
         text = localize('install', 'Install');
     }
 
-    addActionButton(actions, 'install prominent', text, 'privateExtensions.extension.install', pkg.extensionId);
+    addActionButton(actions, 'install prominent', text, 'com-appalachia-vscode-extension-manager.extension.install', pkg.extensionId);
 }
 
 function getLocalResourceRoots() {
