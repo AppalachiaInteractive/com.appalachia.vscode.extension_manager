@@ -208,7 +208,7 @@ export class Registry {
                     window.showErrorMessage(
                         localize(
                             'invalid.channel',
-                            '{0} Your "com-appalachia-vscode-extension-manager.channels" setting may be invalid. {1} to fix.',
+                            '{0} Your "appa-extension-manager.channels" setting may be invalid. {1} to fix.',
                             ex.message,
                             settingsJsonLink,
                         ),

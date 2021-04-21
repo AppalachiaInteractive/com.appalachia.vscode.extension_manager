@@ -1,5 +1,5 @@
 {
-    "name": "com-appalachia-vscode-extension-manager",
+    "name": "appa-extension-manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
     "version": "1.5.7",
@@ -60,15 +60,15 @@
     ],
     "activationEvents": [
         "workspaceContains:.vscode/extensions.private.json",
-        "onView:com-appalachia-vscode-extension-manager.extensions",
-        "onView:com-appalachia-vscode-extension-manager.recommended",
-        "onCommand:com-appalachia-vscode-extension-manager.cache.delete",
-        "onCommand:com-appalachia-vscode-extension-manager.cache.garbageCollect",
-        "onCommand:com-appalachia-vscode-extension-manager.checkForUpdates",
-        "onCommand:com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",
-        "onCommand:com-appalachia-vscode-extension-manager.configureRecommendedExtensions",
-        "onCommand:com-appalachia-vscode-extension-manager.registry.add",
-        "onCommand:com-appalachia-vscode-extension-manager.registry.remove"
+        "onView:appa-extension-manager.extensions",
+        "onView:appa-extension-manager.recommended",
+        "onCommand:appa-extension-manager.cache.delete",
+        "onCommand:appa-extension-manager.cache.garbageCollect",
+        "onCommand:appa-extension-manager.checkForUpdates",
+        "onCommand:appa-extension-manager.configureWorkspaceRegistries",
+        "onCommand:appa-extension-manager.configureRecommendedExtensions",
+        "onCommand:appa-extension-manager.registry.add",
+        "onCommand:appa-extension-manager.registry.remove"
     ],
     "contributes": {
         "jsonValidation": [
@@ -89,17 +89,17 @@
             "type": "object",
             "title": "%configuration.title%",
             "properties": {
-                "com-appalachia-vscode-extension-manager.registries": {
+                "appa-extension-manager.registries": {
                     "type": "array",
                     "scope": "machine",
                     "description": "%configuration.registries.description%"
                 },
-                "com-appalachia-vscode-extension-manager.channels": {
+                "appa-extension-manager.channels": {
                     "type": "object",
                     "scope": "machine",
                     "description": "%configuration.channels.description%"
                 },
-                "com-appalachia-vscode-extension-manager.updateCheckInterval": {
+                "appa-extension-manager.updateCheckInterval": {
                     "type": "number",
                     "scope": "machine",
                     "description": "%configuration.updateCheckInterval.description%",
@@ -109,48 +109,48 @@
         },
         "commands": [
             {
-                "command": "com-appalachia-vscode-extension-manager.cache.delete",
+                "command": "appa-extension-manager.cache.delete",
                 "title": "%command.cache.delete.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.cache.garbageCollect",
+                "command": "appa-extension-manager.cache.garbageCollect",
                 "title": "%command.cache.garbageCollect.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.checkForUpdates",
+                "command": "appa-extension-manager.checkForUpdates",
                 "title": "%command.checkForUpdates.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",
+                "command": "appa-extension-manager.configureWorkspaceRegistries",
                 "title": "%command.configureWorkspaceRegistries.title%",
                 "category": "%command.category%",
                 "icon": "$(edit)"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.configureRecommendedExtensions",
+                "command": "appa-extension-manager.configureRecommendedExtensions",
                 "title": "%command.configureRecommendedExtensions.title%",
                 "category": "%command.category%",
                 "icon": "$(edit)"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.refresh",
+                "command": "appa-extension-manager.refresh",
                 "title": "%command.refresh.title%",
                 "category": "%command.category%",
                 "icon": "$(refresh)"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.install",
+                "command": "appa-extension-manager.extension.install",
                 "title": "%command.extension.install.title%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.uninstall",
+                "command": "appa-extension-manager.extension.uninstall",
                 "title": "%command.extension.uninstall.title%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.update",
+                "command": "appa-extension-manager.extension.update",
                 "title": "%command.extension.update.title%",
                 "icon": {
                     "light": "media/light/update.svg",
@@ -158,25 +158,25 @@
                 }
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",
+                "command": "appa-extension-manager.extension.install.anotherVersion",
                 "title": "%command.extension.install.anotherVersion.title%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",
+                "command": "appa-extension-manager.extension.switchChannels",
                 "title": "%command.extension.switchChannels.title%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",
+                "command": "appa-extension-manager.extension.copyInformation",
                 "title": "%command.extension.copyInformation.title%"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.registry.add",
+                "command": "appa-extension-manager.registry.add",
                 "title": "%command.registry.add.title%",
                 "category": "%command.category%",
                 "icon": "$(new-folder)"
             },
             {
-                "command": "com-appalachia-vscode-extension-manager.registry.remove",
+                "command": "appa-extension-manager.registry.remove",
                 "title": "%command.registry.remove.title%",
                 "category": "%command.category%"
             }
@@ -184,136 +184,136 @@
         "viewsContainers": {
             "activitybar": [
                 {
-                    "id": "com-appalachia-vscode-extension-manager",
-                    "title": "%viewsContainers.activitybar.com-appalachia-vscode-extension-manager.title%",
+                    "id": "appa-extension-manager",
+                    "title": "%viewsContainers.activitybar.appa-extension-manager.title%",
                     "icon": "media/extensions.svg"
                 }
             ]
         },
         "views": {
-            "com-appalachia-vscode-extension-manager": [
+            "appa-extension-manager": [
                 {
-                    "id": "com-appalachia-vscode-extension-manager.extensions",
-                    "name": "%views.com-appalachia-vscode-extension-manager.extensions.name%"
+                    "id": "appa-extension-manager.extensions",
+                    "name": "%views.appa-extension-manager.extensions.name%"
                 },
                 {
-                    "id": "com-appalachia-vscode-extension-manager.recommended",
-                    "name": "%views.com-appalachia-vscode-extension-manager.recommended.name%"
+                    "id": "appa-extension-manager.recommended",
+                    "name": "%views.appa-extension-manager.recommended.name%"
                 }
             ]
         },
         "viewsWelcome": [
             {
-                "view": "com-appalachia-vscode-extension-manager.extensions",
-                "contents": "%views.com-appalachia-vscode-extension-manager.extensions.noExtensions%"
+                "view": "appa-extension-manager.extensions",
+                "contents": "%views.appa-extension-manager.extensions.noExtensions%"
             },
             {
-                "view": "com-appalachia-vscode-extension-manager.extensions",
-                "contents": "%views.com-appalachia-vscode-extension-manager.extensions.configure%",
+                "view": "appa-extension-manager.extensions",
+                "contents": "%views.appa-extension-manager.extensions.configure%",
                 "when": "workbenchState != empty"
             },
             {
-                "view": "com-appalachia-vscode-extension-manager.recommended",
-                "contents": "%views.com-appalachia-vscode-extension-manager.recommended.noExtensions%"
+                "view": "appa-extension-manager.recommended",
+                "contents": "%views.appa-extension-manager.recommended.noExtensions%"
             },
             {
-                "view": "com-appalachia-vscode-extension-manager.recommended",
-                "contents": "%views.com-appalachia-vscode-extension-manager.recommended.configure%",
+                "view": "appa-extension-manager.recommended",
+                "contents": "%views.appa-extension-manager.recommended.configure%",
                 "when": "workbenchState != empty"
             }
         ],
         "menus": {
             "view/title": [
                 {
-                    "command": "com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",
-                    "when": "view == com-appalachia-vscode-extension-manager.extensions && workbenchState != empty",
+                    "command": "appa-extension-manager.configureWorkspaceRegistries",
+                    "when": "view == appa-extension-manager.extensions && workbenchState != empty",
                     "group": "navigation"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.refresh",
-                    "when": "view == com-appalachia-vscode-extension-manager.extensions",
+                    "command": "appa-extension-manager.refresh",
+                    "when": "view == appa-extension-manager.extensions",
                     "group": "navigation"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.checkForUpdates",
-                    "when": "view == com-appalachia-vscode-extension-manager.extensions",
+                    "command": "appa-extension-manager.checkForUpdates",
+                    "when": "view == appa-extension-manager.extensions",
                     "group": "extensions"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.registry.add",
-                    "when": "view == com-appalachia-vscode-extension-manager.extensions",
+                    "command": "appa-extension-manager.registry.add",
+                    "when": "view == appa-extension-manager.extensions",
                     "group": "registry"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.configureRecommendedExtensions",
-                    "when": "view == com-appalachia-vscode-extension-manager.recommended && workbenchState != empty",
+                    "command": "appa-extension-manager.configureRecommendedExtensions",
+                    "when": "view == appa-extension-manager.recommended && workbenchState != empty",
                     "group": "navigation"
                 }
             ],
             "view/item/context": [
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.install",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /available/",
+                    "command": "appa-extension-manager.extension.install",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /available/",
                     "group": "install"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.uninstall",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appa-extension-manager.extension.uninstall",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
                     "group": "install"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.update",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /update/",
+                    "command": "appa-extension-manager.extension.update",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /update/",
                     "group": "inline"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appa-extension-manager.extension.install.anotherVersion",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
                     "group": "installVersion"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appa-extension-manager.extension.switchChannels",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
                     "group": "installVersion"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",
-                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ && viewItem =~ /extension/",
+                    "command": "appa-extension-manager.extension.copyInformation",
+                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /extension/",
                     "group": "other"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.registry.remove",
-                    "when": "view == com-appalachia-vscode-extension-manager.extensions && viewItem == registry.user",
+                    "command": "appa-extension-manager.registry.remove",
+                    "when": "view == appa-extension-manager.extensions && viewItem == registry.user",
                     "group": "registries"
                 }
             ],
             "commandPalette": [
                 {
-                    "command": "com-appalachia-vscode-extension-manager.refresh",
+                    "command": "appa-extension-manager.refresh",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.install",
+                    "command": "appa-extension-manager.extension.install",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.uninstall",
+                    "command": "appa-extension-manager.extension.uninstall",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.update",
+                    "command": "appa-extension-manager.extension.update",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",
+                    "command": "appa-extension-manager.extension.install.anotherVersion",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",
+                    "command": "appa-extension-manager.extension.switchChannels",
                     "when": "false"
                 },
                 {
-                    "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",
+                    "command": "appa-extension-manager.extension.copyInformation",
                     "when": "false"
                 }
             ]
@@ -380,5 +380,12 @@
         "semver": "^7.3.2",
         "valid-url": "^1.0.9",
         "vscode-nls": "^5.0.0"
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "printWidth": 120,
+        "endOfLine": "auto"
     }
 }

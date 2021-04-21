@@ -11,7 +11,7 @@ import { context } from './context';
 const readFile = promisify(fs.readFile);
 
 export function getConfig(): WorkspaceConfiguration {
-    return workspace.getConfiguration('com-appalachia-vscode-extension-manager');
+    return workspace.getConfiguration('appa-extension-manager');
 }
 
 /**

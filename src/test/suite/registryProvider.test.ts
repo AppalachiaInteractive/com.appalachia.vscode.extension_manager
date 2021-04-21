@@ -76,7 +76,7 @@ suite('Registry Provider', function () {
     });
 
     test('Get registries', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);
+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);
 
         const provider = new RegistryProvider(extensionInfo);
 
@@ -91,7 +91,7 @@ suite('Registry Provider', function () {
     });
 
     test('Get recommendations', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);
+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);
 
         const provider = new RegistryProvider(extensionInfo);
 
@@ -102,7 +102,7 @@ suite('Registry Provider', function () {
     });
 
     test('Get unique packages', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);
+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);
 
         const provider = new RegistryProvider(extensionInfo);
 
@@ -121,7 +121,7 @@ suite('Registry Provider', function () {
     });
 
     test('Tracking custom channel', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG_CHANNEL);
+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG_CHANNEL);
 
         const provider = new RegistryProvider(extensionInfo);
         const packages = await provider.getUniquePackages();
@@ -139,7 +139,7 @@ suite('Registry Provider', function () {
     });
 
     test('Invalid user config: wrong type', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {
+        stubGlobalConfiguration('appa-extension-manager', {
             registries: 42,
         });
 
@@ -156,7 +156,7 @@ suite('Registry Provider', function () {
     });
 
     test('Invalid user config: missing name', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {
+        stubGlobalConfiguration('appa-extension-manager', {
             registries: [{ registry: USER_REGISTRY_URL }],
         });
 
@@ -172,7 +172,7 @@ suite('Registry Provider', function () {
     });
 
     test('Invalid user config: wrong name type', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {
+        stubGlobalConfiguration('appa-extension-manager', {
             registries: [{ name: 42 }],
         });
 
@@ -188,7 +188,7 @@ suite('Registry Provider', function () {
     });
 
     test('Invalid user config: wrong registry type', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {
+        stubGlobalConfiguration('appa-extension-manager', {
             registries: [{ name: 'User Registry', registry: 42 }],
         });
 
@@ -204,7 +204,7 @@ suite('Registry Provider', function () {
     });
 
     test('Invalid user config: mixed values', async function () {
-        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {
+        stubGlobalConfiguration('appa-extension-manager', {
             registries: [
                 { name: 'User Registry 1', registry: USER_REGISTRY_URL },
                 { name: 42, registry: WORKSPACE_REGISTRY_URL },

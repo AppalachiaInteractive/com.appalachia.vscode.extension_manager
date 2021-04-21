@@ -101,7 +101,7 @@ export class UpdateChecker implements Disposable {
     }
 
     private onDidChangeConfiguration(e: vscode.ConfigurationChangeEvent) {
-        if (e.affectsConfiguration('com-appalachia-vscode-extension-manager.updateCheckInterval')) {
+        if (e.affectsConfiguration('appa-extension-manager.updateCheckInterval')) {
             this.intervalMS = getUpdateIntervalMS();
             this.setAutomaticCheckInterval();
         }
@@ -130,7 +130,7 @@ export class UpdateChecker implements Disposable {
         );
 
         if (response === showUpdates) {
-            await vscode.commands.executeCommand('com-appalachia-vscode-extension-manager.extensions.focus');
+            await vscode.commands.executeCommand('appa-extension-manager.extensions.focus');
         } else if (response === updateAll) {
             await updateExtensions(this.extensionInfo, updates);
         }

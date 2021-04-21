@@ -19,7 +19,7 @@ let logger: Logger | undefined;
  */
 export function getLogger(): Logger {
     if (!logger) {
-        logger = new Logger('Private Extension Manager');
+        logger = new Logger('Extension Manager');
     }
 
     return logger;
