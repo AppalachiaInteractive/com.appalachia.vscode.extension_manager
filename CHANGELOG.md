@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 414c4a8 | 2021-04-21 | Chris Schubert | Updating extension name |
+
+
+ ## Tag: v1.5.4
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| b6369c7 | 2021-04-21 | Chris Schubert | 1.5.4 |
 
 
  ## Tag: v1.5.3
