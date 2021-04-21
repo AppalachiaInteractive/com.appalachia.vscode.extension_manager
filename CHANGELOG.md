@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 820c6a8 | 2021-04-21 | Chris Schubert | Testing new setup |
+
+
+ ## Tag: v1.5.2
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 8be0dec | 2021-04-20 | Chris Schubert | 1.5.2 |
 | 48fd900 | 2021-04-20 | Chris Schubert | Adding webpack |
 
 
