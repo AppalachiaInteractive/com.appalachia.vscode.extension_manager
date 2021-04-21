@@ -2,7 +2,7 @@
     "name": "com-appalachia-vscode-extension-manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
-    "version": "1.5.6",
+    "version": "1.5.7",
     "engines": {
         "vscode": "^1.55.0"
     },
