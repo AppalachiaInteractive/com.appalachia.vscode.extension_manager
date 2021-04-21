@@ -1,5 +1,5 @@
 {
-    "name": "com.appalachia.vscode.extension_manager",
+    "name": "com-appalachia-vscode-extension-manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
     "version": "1.5.4",
