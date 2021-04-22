@@ -171,10 +171,10 @@
 <pre class='context'> .vscode/**</pre>
 <pre class='context'> </pre></div></div><h2>CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/CHANGELOG.md b/CHANGELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..8c285a7</pre>
+<pre class='file'>index 0000000..6f21ac8</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/CHANGELOG.md</pre>
-<pre class='info'>@@ -0,0 +1,205 @@</pre>
+<pre class='info'>@@ -0,0 +1,212 @@</pre>
 <pre class='insert'>+```</pre>
 <pre class='insert'>+ ________   ___  ___   ________   ________    ________   _______    ________      </pre>
 <pre class='insert'>+|\   ____\ |\  \|\  \ |\   __  \ |\   ___  \ |\   ____\ |\  ___ \  |\   ____\     </pre>
@@ -188,6 +188,13 @@
 <pre class='insert'>+## Unreleased</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 455430f | 2021-04-21 | Chris Schubert | Issue with generating vsix |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.8</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| d8ece3e | 2021-04-21 | Chris Schubert | 1.5.8 |</pre>
 <pre class='insert'>+| 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |</pre>
 <pre class='insert'>+| 4065172 | 2021-04-21 | Chris Schubert | Removing github workflows |</pre>
 <pre class='insert'>+</pre>
@@ -770,7 +777,7 @@
 <pre class='insert'>+extension will not transmit any data beyond what is necessary to establish the</pre>
 <pre class='insert'>+connection. The extension will not transmit any data back to Garmin.</pre></div></div><h2>RELEASELOG.md<button class='copy' onclick='navigator.clipboard.writeText("RELEASELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/RELEASELOG.md b/RELEASELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..7ebd97e</pre>
+<pre class='file'>index 0000000..ea6def4</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/RELEASELOG.md</pre>
 <pre class='info'>@@ -0,0 +1,14 @@</pre>
@@ -784,10 +791,10 @@
 <pre class='insert'>+```</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
-<pre class='insert'>+# 1.5.8</pre>
+<pre class='insert'>+# 1.5.9</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
-<pre class='insert'>+| 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
+<pre class='insert'>+</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
 <pre class='file'>index 0000000..397ac26</pre>
 <pre class='delete'>--- /dev/null</pre>
@@ -921,7 +928,7 @@
 <pre class='undefined'>rename from extension/media/workbench.css</pre>
 <pre class='undefined'>rename to media/workbench.css</pre></div></div><h2>modifications.sh<button class='copy' onclick='navigator.clipboard.writeText("modifications.sh")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/modifications.sh b/modifications.sh</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..6df542e</pre>
+<pre class='file'>index 0000000..29a8e8f</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/modifications.sh</pre>
 <pre class='info'>@@ -0,0 +1,6 @@</pre>
@@ -930,15 +937,16 @@
 <pre class='insert'>+if [ -f MODIFICATIONS.md ] ; then rm MODIFICATIONS.md; fi</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+html-diff 7c88415ff673fa83762ca4790aa7de68811622f6 &gt; MODIFICATIONS.html</pre>
-<pre class='insert'>+</pre></div></div><h2>package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/package-lock.json b/package-lock.json</pre>
+<pre class='insert'>+git add MODIFICATIONS.html</pre>
+<pre class='undefined'>\ No newline at end of file</pre></div></div><h2>package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/package-lock.json b/package-lock.json</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..489a431</pre>
+<pre class='file'>index 0000000..de10260</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/package-lock.json</pre>
 <pre class='info'>@@ -0,0 +1,5269 @@</pre>
 <pre class='insert'>+{</pre>
 <pre class='insert'>+    "name": "appa-extension-manager",</pre>
-<pre class='insert'>+    "version": "1.5.8",</pre>
+<pre class='insert'>+    "version": "1.5.9",</pre>
 <pre class='insert'>+    "lockfileVersion": 1,</pre>
 <pre class='insert'>+    "requires": true,</pre>
 <pre class='insert'>+    "dependencies": {</pre>
@@ -6208,7 +6216,7 @@
 <pre class='undefined'>similarity index 55%</pre>
 <pre class='undefined'>rename from extension/package.json</pre>
 <pre class='undefined'>rename to package.json</pre>
-<pre class='file'>index 0a63e7b..b9ac871 100644</pre>
+<pre class='file'>index 0a63e7b..25b06a2 100644</pre>
 <pre class='delete'>--- a/extension/package.json</pre>
 <pre class='insert'>+++ b/package.json</pre>
 <pre class='info'>@@ -1,48 +1,75 @@</pre>
@@ -6220,7 +6228,7 @@
 <pre class='delete'>-    "version": "1.5.0",</pre>
 <pre class='delete'>-    "publisher": "garmin",</pre>
 <pre class='delete'>-    "license": "Apache-2.0",</pre>
-<pre class='insert'>+    "version": "1.5.8",</pre>
+<pre class='insert'>+    "version": "1.5.9",</pre>
 <pre class='insert'>+    "engines": {</pre>
 <pre class='insert'>+        "vscode": "^1.55.0"</pre>
 <pre class='insert'>+    },</pre>
