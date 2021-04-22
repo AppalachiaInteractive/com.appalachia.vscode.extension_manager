@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 356fa65 | 2021-04-21 | Chris Schubert | Fixing postversion script name |
+
+
+ ## Tag: v1.5.10
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| bd698df | 2021-04-21 | Chris Schubert | 1.5.10 |
 | ebd2b75 | 2021-04-21 | Chris Schubert | Trying to postpack vsix |
 
 
