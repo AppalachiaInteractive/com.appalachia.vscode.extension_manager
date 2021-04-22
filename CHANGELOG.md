@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| e76a1c4 | 2021-04-21 | Chris Schubert | Moving postpack script to execute after vscode prepublish |
+
+
+ ## Tag: v1.5.11
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| eb363e9 | 2021-04-21 | Chris Schubert | 1.5.11 |
 | 356fa65 | 2021-04-21 | Chris Schubert | Fixing postversion script name |
 
 
