@@ -68,7 +68,55 @@
 <pre class='undefined'>rename to .editorconfig</pre></div></div><h2>extension/.eslintrc.json<button class='copy' onclick='navigator.clipboard.writeText("extension/.eslintrc.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/.eslintrc.json b/.eslintrc.json</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/.eslintrc.json</pre>
-<pre class='undefined'>rename to .eslintrc.json</pre></div></div><h2>.gitignore<button class='copy' onclick='navigator.clipboard.writeText(".gitignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.gitignore b/.gitignore</pre>
+<pre class='undefined'>rename to .eslintrc.json</pre></div></div><h2>.github/workflows/extension.yml<button class='copy' onclick='navigator.clipboard.writeText(".github/workflows/extension.yml")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.github/workflows/extension.yml b/.github/workflows/extension.yml</pre></div></div><h2>deleted file mode 100644<button class='copy' onclick='navigator.clipboard.writeText("deleted file mode 100644")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>deleted file mode 100644</pre>
+<pre class='file'>index 3bb8cb8..0000000</pre>
+<pre class='delete'>--- a/remote-helper/webpack.config.js</pre>
+<pre class='insert'>+++ /dev/null</pre>
+<pre class='info'>@@ -1,44 +0,0 @@</pre>
+<pre class='delete'>-// @ts-check</pre>
+<pre class='delete'>-// See https://code.visualstudio.com/api/working-with-extensions/bundling-extension</pre>
+<pre class='delete'>-</pre>
+<pre class='delete'>-'use strict';</pre>
+<pre class='delete'>-</pre>
+<pre class='delete'>-const path = require('path');</pre>
+<pre class='delete'>-</pre>
+<pre class='delete'>-/** @type {import('webpack').Configuration} */</pre>
+<pre class='delete'>-const config = {</pre>
+<pre class='delete'>-    target: 'node',</pre>
+<pre class='delete'>-    mode: 'none',</pre>
+<pre class='delete'>-    entry: './src/extension.ts',</pre>
+<pre class='delete'>-    output: {</pre>
+<pre class='delete'>-        path: path.resolve(__dirname, 'dist'),</pre>
+<pre class='delete'>-        filename: 'extension.js',</pre>
+<pre class='delete'>-        libraryTarget: 'commonjs2',</pre>
+<pre class='delete'>-    },</pre>
+<pre class='delete'>-    devtool: 'nosources-source-map',</pre>
+<pre class='delete'>-    infrastructureLogging: {</pre>
+<pre class='delete'>-        level: 'log', // TODO: replace with WEBPACK_CLI_START_FINISH_FORCE_LOG=1 once that is supported</pre>
+<pre class='delete'>-    },</pre>
+<pre class='delete'>-    externals: {</pre>
+<pre class='delete'>-        vscode: 'commonjs vscode', // the vscode module is created on-the-fly and must be excluded.</pre>
+<pre class='delete'>-    },</pre>
+<pre class='delete'>-    resolve: {</pre>
+<pre class='delete'>-        extensions: ['.ts', '.js'],</pre>
+<pre class='delete'>-    },</pre>
+<pre class='delete'>-    module: {</pre>
+<pre class='delete'>-        rules: [</pre>
+<pre class='delete'>-            {</pre>
+<pre class='delete'>-                // pack TypeScript files with ts-loader</pre>
+<pre class='delete'>-                test: /\.ts$/,</pre>
+<pre class='delete'>-                exclude: /node_modules/,</pre>
+<pre class='delete'>-                use: [</pre>
+<pre class='delete'>-                    {</pre>
+<pre class='delete'>-                        loader: 'ts-loader',</pre>
+<pre class='delete'>-                    },</pre>
+<pre class='delete'>-                ],</pre>
+<pre class='delete'>-            },</pre>
+<pre class='delete'>-        ],</pre>
+<pre class='delete'>-    },</pre>
+<pre class='delete'>-};</pre>
+<pre class='delete'>-</pre>
+<pre class='delete'>-module.exports = config;</pre></div></div><h2>.github/workflows/remote-helper.yml<button class='copy' onclick='navigator.clipboard.writeText(".github/workflows/remote-helper.yml")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.github/workflows/remote-helper.yml b/.github/workflows/remote-helper.yml</pre></div></div><h2>.gitignore<button class='copy' onclick='navigator.clipboard.writeText(".gitignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.gitignore b/.gitignore</pre>
 <pre class='file'>index e96841d..4215ab4 100644</pre>
 <pre class='delete'>--- a/.gitignore</pre>
 <pre class='insert'>+++ b/.gitignore</pre>
@@ -123,10 +171,10 @@
 <pre class='context'> .vscode/**</pre>
 <pre class='context'> </pre></div></div><h2>CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/CHANGELOG.md b/CHANGELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..3d071e3</pre>
+<pre class='file'>index 0000000..8c285a7</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/CHANGELOG.md</pre>
-<pre class='info'>@@ -0,0 +1,14 @@</pre>
+<pre class='info'>@@ -0,0 +1,205 @@</pre>
 <pre class='insert'>+```</pre>
 <pre class='insert'>+ ________   ___  ___   ________   ________    ________   _______    ________      </pre>
 <pre class='insert'>+|\   ____\ |\  \|\  \ |\   __  \ |\   ___  \ |\   ____\ |\  ___ \  |\   ____\     </pre>
@@ -140,7 +188,198 @@
 <pre class='insert'>+## Unreleased</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
-<pre class='insert'>+</pre></div></div><h2>extension/LICENSE<button class='copy' onclick='navigator.clipboard.writeText("extension/LICENSE")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/LICENSE b/LICENSE</pre>
+<pre class='insert'>+| 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |</pre>
+<pre class='insert'>+| 4065172 | 2021-04-21 | Chris Schubert | Removing github workflows |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.7</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 7f01cae | 2021-04-21 | Chris Schubert | 1.5.7 |</pre>
+<pre class='insert'>+| 4800414 | 2021-04-21 | Chris Schubert | Fixing github links and trying again |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.6</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| b3f2fb8 | 2021-04-21 | Chris Schubert | 1.5.6 |</pre>
+<pre class='insert'>+| 9e8835e | 2021-04-21 | Chris Schubert | Updating privateExtensions prefix to match package name |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.5</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| f9942ff | 2021-04-21 | Chris Schubert | 1.5.5 |</pre>
+<pre class='insert'>+| 414c4a8 | 2021-04-21 | Chris Schubert | Updating extension name |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.4</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| b6369c7 | 2021-04-21 | Chris Schubert | 1.5.4 |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.3</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 1e0af7f | 2021-04-21 | Chris Schubert | 1.5.3 |</pre>
+<pre class='insert'>+| 820c6a8 | 2021-04-21 | Chris Schubert | Testing new setup |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.2</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 8be0dec | 2021-04-20 | Chris Schubert | 1.5.2 |</pre>
+<pre class='insert'>+| 48fd900 | 2021-04-20 | Chris Schubert | Adding webpack |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.1</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| ba8df7a | 2021-04-20 | Chris Schubert | 1.5.1 |</pre>
+<pre class='insert'>+| 6d01520 | 2021-04-20 | Chris Schubert | Updating package.json |</pre>
+<pre class='insert'>+| b549e7f | 2021-04-20 | Chris Schubert | Reorganizing project structure |</pre>
+<pre class='insert'>+| 25b253d | 2021-04-20 | Chris Schubert | Adding new licensing terms and describing Aapache License v2 compliance |</pre>
+<pre class='insert'>+| 310e179 | 2021-04-20 | Chris Schubert | Updating license to declare project changes and adding modification log |</pre>
+<pre class='insert'>+| 7c88415 | 2021-04-07 | Joel Spadin | v1.5.0 |</pre>
+<pre class='insert'>+| 1526cab | 2021-04-07 | Joel Spadin | Switch to webpack v5 |</pre>
+<pre class='insert'>+| ea0eb2b | 2021-04-07 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| adc3435 | 2021-04-07 | Joel Spadin | Merge pull request #37 from offa/os_specific_packaging |</pre>
+<pre class='insert'>+| 642666d | 2021-04-03 | offa | String concatenation replaced with template string. |</pre>
+<pre class='insert'>+| 6fa38af | 2021-04-03 | offa | osSpecificVsix description improved. |</pre>
+<pre class='insert'>+| 2d68d10 | 2021-02-25 | offa | vsixFile getter introduced to improve testing. |</pre>
+<pre class='insert'>+| 48e83d8 | 2021-02-24 | offa | OS specific field renamed error handling improved, unnecessary check removed, support for 'default' OS added and documentation added. |</pre>
+<pre class='insert'>+| 83c5949 | 2021-02-23 | offa | Add support for OS specific files. |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.4.1</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 1f44717 | 2020-11-20 | Joel Spadin | v1.4.1 |</pre>
+<pre class='insert'>+| 64cf5d2 | 2020-11-20 | Joel Spadin | Revert libnpmsearch as well |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.4.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 08f880f | 2020-11-20 | Joel Spadin | v1.4.0 (remote-helper) |</pre>
+<pre class='insert'>+| 5007d63 | 2020-11-20 | Joel Spadin | v1.4.0 |</pre>
+<pre class='insert'>+| 0dcdab3 | 2020-11-20 | Joel Spadin | Revert NPM packages again |</pre>
+<pre class='insert'>+| 6ada6c1 | 2020-11-20 | Joel Spadin | Replace deprecated globalStoragePath |</pre>
+<pre class='insert'>+| f0f514b | 2020-11-05 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| f87ad00 | 2020-11-19 | Joel Spadin | Merge pull request #29 from lachaib/patch-1 |</pre>
+<pre class='insert'>+| bb839eb | 2020-11-19 | Louis-Amaury Chaib | Enable extension on web-based vscode |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.3.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 7abdbb9 | 2020-09-15 | Joel Spadin | Fix engines version |</pre>
+<pre class='insert'>+| a35d251 | 2020-09-15 | Joel Spadin | v1.3.0 |</pre>
+<pre class='insert'>+| aca69d8 | 2020-09-15 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| 6e926ae | 2020-09-15 | Joel Spadin | Improve cache cleanup commands |</pre>
+<pre class='insert'>+| 1c62899 | 2020-09-15 | Joel Spadin | Add documentation for extension updates |</pre>
+<pre class='insert'>+| f2ea235 | 2020-09-15 | Joel Spadin | Add BSD 3 clause to allowed licenses |</pre>
+<pre class='insert'>+| c80525a | 2020-08-03 | Joel Spadin | Merge pull request #21 from joelspadin-garmin/dependabot/npm_and_yarn/extension/elliptic-6.5.3 |</pre>
+<pre class='insert'>+| 357330e | 2020-08-03 | Joel Spadin | Merge pull request #22 from joelspadin-garmin/dependabot/npm_and_yarn/remote-helper/elliptic-6.5.3 |</pre>
+<pre class='insert'>+| 0b78d5b | 2020-08-01 | dependabot[bot] | Bump elliptic from 6.5.2 to 6.5.3 in /remote-helper |</pre>
+<pre class='insert'>+| 872b45a | 2020-08-01 | dependabot[bot] | Bump elliptic from 6.5.2 to 6.5.3 in /extension |</pre>
+<pre class='insert'>+| 39206a7 | 2020-07-14 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| 6a927f3 | 2020-07-08 | Joel Spadin | Merge pull request #19 from joelspadin-garmin/dependabot/npm_and_yarn/extension/npm-registry-fetch-8.1.1 |</pre>
+<pre class='insert'>+| 3bc1b8a | 2020-07-08 | dependabot[bot] | Bump npm-registry-fetch from 8.1.0 to 8.1.1 in /extension |</pre>
+<pre class='insert'>+| cc8ea80 | 2020-07-08 | Joel Spadin | Merge pull request #18 from joelspadin-garmin/npm-upgrade |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.3.0-beta.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 6ddad4b | 2020-06-30 | Joel Spadin | v1.3.0-beta.0 |</pre>
+<pre class='insert'>+| 338d38c | 2020-06-30 | Joel Spadin | Upgrade npm modules |</pre>
+<pre class='insert'>+| 808c05a | 2020-06-30 | Joel Spadin | Fix setup instructions |</pre>
+<pre class='insert'>+| bb57d49 | 2020-06-29 | Joel Spadin | Update typescript-eslint |</pre>
+<pre class='insert'>+| db66d91 | 2020-06-29 | Joel Spadin | Update dependencies and fix linting issues |</pre>
+<pre class='insert'>+| 252191f | 2020-05-08 | Joel Spadin | Always show recommended extensions |</pre>
+<pre class='insert'>+| b84e933 | 2020-05-04 | Joel Spadin | Add a troubleshooting section to the README |</pre>
+<pre class='insert'>+| 3c9d854 | 2020-05-04 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.2.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 05d51ff | 2020-04-09 | Joel Spadin | v1.2.0 |</pre>
+<pre class='insert'>+| 8e9c4cc | 2020-04-09 | Joel Spadin | Change cache clean to manual command |</pre>
+<pre class='insert'>+| 588a7ab | 2020-04-09 | Joel Spadin | Add welcome views |</pre>
+<pre class='insert'>+| 4a590aa | 2020-04-09 | Joel Spadin | Revert npm libraries |</pre>
+<pre class='insert'>+| eef3d4c | 2020-03-31 | Joel Spadin | Fix prettier not running during lint |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.1.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 24d2d9c | 2020-03-31 | Joel Spadin | v1.1.0 |</pre>
+<pre class='insert'>+| 04fde1d | 2020-03-27 | Joel Spadin | Upgrade pacote and npm-registry-fetch |</pre>
+<pre class='insert'>+| 3495f18 | 2020-03-23 | Joel Spadin | Update to Prettier 2.0 |</pre>
+<pre class='insert'>+| bf72ed8 | 2020-03-17 | Joel Spadin | Improve error handling |</pre>
+<pre class='insert'>+| 5a2f5d3 | 2020-03-17 | Joel Spadin | Update dependencies. |</pre>
+<pre class='insert'>+| d7451c8 | 2020-03-17 | Joel Spadin | Use source maps in tests |</pre>
+<pre class='insert'>+| 879b6c3 | 2020-03-17 | Joel Spadin | Refactor extension info and logging |</pre>
+<pre class='insert'>+| dc2a242 | 2020-03-16 | Joel Spadin | Add pagination options |</pre>
+<pre class='insert'>+| 19889c8 | 2020-03-05 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| 584c365 | 2020-03-16 | Joel Spadin | Merge pull request #9 from joelspadin-garmin/dependabot/npm_and_yarn/remote-helper/acorn-6.4.1 |</pre>
+<pre class='insert'>+| 31fc3fd | 2020-03-16 | Joel Spadin | Merge pull request #10 from joelspadin-garmin/dependabot/npm_and_yarn/extension/acorn-6.4.1 |</pre>
+<pre class='insert'>+| 9cbc9ef | 2020-03-15 | dependabot[bot] | Bump acorn from 6.4.0 to 6.4.1 in /extension |</pre>
+<pre class='insert'>+| 20361db | 2020-03-15 | dependabot[bot] | Bump acorn from 6.4.0 to 6.4.1 in /remote-helper |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.0.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 87bb1c9 | 2020-02-12 | Joel Spadin | v1.0.0 |</pre>
+<pre class='insert'>+| 952fc77 | 2020-02-12 | Joel Spadin | Finish release channels UI |</pre>
+<pre class='insert'>+| ad869af | 2020-02-10 | Joel Spadin | Clean up README, add privacy statement |</pre>
+<pre class='insert'>+| 41d7bd2 | 2020-01-15 | Joel Spadin | Update styles and use codicons |</pre>
+<pre class='insert'>+| e74829e | 2020-02-06 | Joel Spadin | Update dependencies, switch to eslint |</pre>
+<pre class='insert'>+| 3ac38e4 | 2020-01-15 | Joel Spadin | Sort versions in descending order |</pre>
+<pre class='insert'>+| bb78764 | 2020-01-14 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| e1cf4c6 | 2020-01-08 | Joel Spadin | Merge pull request #4 from montaguek-garmin/channels |</pre>
+<pre class='insert'>+| 06c83d4 | 2020-01-08 | Kyson Montague | Fix changelog |</pre>
+<pre class='insert'>+| 414a916 | 2020-01-08 | Kyson Montague | Code clean up for initial support of channels. |</pre>
+<pre class='insert'>+| b433d83 | 2020-01-08 | Joel Spadin | Add build status badges |</pre>
+<pre class='insert'>+| e1869c5 | 2020-01-08 | Joel Spadin | Fix remote-helper tests |</pre>
+<pre class='insert'>+| cc19d6a | 2020-01-08 | Joel Spadin | Speed up test compile |</pre>
+<pre class='insert'>+| f09e6ae | 2020-01-08 | Joel Spadin | Fix test fixture path |</pre>
+<pre class='insert'>+| bbace64 | 2020-01-08 | Joel Spadin | Remove condition from xvfb step |</pre>
+<pre class='insert'>+| 0d6a321 | 2020-01-08 | Joel Spadin | Use xvfb in CI tests |</pre>
+<pre class='insert'>+| d393991 | 2020-01-08 | Joel Spadin | Use working-directory instead of cd |</pre>
+<pre class='insert'>+| 8e4970a | 2020-01-08 | Joel Spadin | Use separate CI scripts for each extension |</pre>
+<pre class='insert'>+| c36e56f | 2020-01-08 | Joel Spadin | Add CI workflow |</pre>
+<pre class='insert'>+| 6d32d72 | 2020-01-07 | Kyson Montague | Merge remote-tracking branch 'upstream/master' into channels |</pre>
+<pre class='insert'>+| e91a746 | 2020-01-07 | Kyson Montague | Refactor to support publisher.packageId |</pre>
+<pre class='insert'>+| 6d76b5a | 2020-01-06 | Kyson Montague | Addressing review comments |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v0.9.0-beta.0</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 89e2ae8 | 2020-01-07 | Joel Spadin | v0.9.0-beta.0 |</pre>
+<pre class='insert'>+| 49ccdea | 2020-01-07 | Joel Spadin | Remove useless prepublishOnly script |</pre>
+<pre class='insert'>+| efe294f | 2020-01-07 | Joel Spadin | Fix min vscode version |</pre>
+<pre class='insert'>+| bdb7ee4 | 2020-01-06 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| 7655133 | 2019-12-23 | Kyson Montague | Initial attempt at supporting channels |</pre>
+<pre class='insert'>+| ba2cf10 | 2019-12-09 | Joel Spadin | Update extension kind inference |</pre>
+<pre class='insert'>+| 891d133 | 2019-12-09 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| 36a1b0b | 2019-12-09 | Joel Spadin | Reorganize local typings |</pre>
+<pre class='insert'>+| 2a7d278 | 2019-12-03 | Joel Spadin | Improve linting |</pre>
+<pre class='insert'>+| 768eb8c | 2019-12-02 | Joel Spadin | Update vsce |</pre>
+<pre class='insert'>+| 8b603e7 | 2019-11-27 | Joel Spadin | Update dependencies |</pre>
+<pre class='insert'>+| c0e79f8 | 2019-11-18 | Joel Spadin | Improve type guards, unit tests |</pre>
+<pre class='insert'>+| 031623a | 2019-11-19 | Joel Spadin | Organize imports |</pre>
+<pre class='insert'>+| ef81bf3 | 2019-11-12 | Joel Spadin | Delete duplicate .editorconfig |</pre>
+<pre class='insert'>+| 7b20f7e | 2019-11-12 | Joel Spadin | Fix debugging documentation |</pre>
+<pre class='insert'>+| 52aad60 | 2019-11-12 | Joel Spadin | Fix readme image link |</pre>
+<pre class='insert'>+| 442a968 | 2019-11-08 | Joel Spadin | Use Typescript 3.7 features |</pre>
+<pre class='insert'>+| 7add770 | 2019-11-08 | Joel Spadin | Initial commit |</pre>
+<pre class='insert'>+| 34e5dad | 2019-11-08 | Joel Spadin | Initialize repository |</pre></div></div><h2>extension/LICENSE<button class='copy' onclick='navigator.clipboard.writeText("extension/LICENSE")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/LICENSE b/LICENSE</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/LICENSE</pre>
 <pre class='undefined'>rename to LICENSE</pre></div></div><h2>LICENSE.md<button class='copy' onclick='navigator.clipboard.writeText("LICENSE.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/LICENSE.md b/LICENSE.md</pre>
@@ -191,7 +430,7 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/i18n/.gitkeep</pre>
 <pre class='undefined'>rename to MODIFICATIONS.html</pre></div></div><h2>README.md<button class='copy' onclick='navigator.clipboard.writeText("README.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/README.md b/README.md</pre>
-<pre class='file'>index 397ac26..5e54ee7 100644</pre>
+<pre class='file'>index 397ac26..9e1105f 100644</pre>
 <pre class='delete'>--- a/README.md</pre>
 <pre class='insert'>+++ b/README.md</pre>
 <pre class='info'>@@ -1,71 +1,285 @@</pre>
@@ -402,7 +641,7 @@
 <pre class='insert'>+### User Configuration</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+Each user may also specify registries to use regardless of which workspace is</pre>
-<pre class='insert'>+open with the `com-appalachia-vscode-extension-manager.registries` setting. This has the same format</pre>
+<pre class='insert'>+open with the `appa-extension-manager.registries` setting. This has the same format</pre>
 <pre class='insert'>+as the `registries` array in `extensions.private.json`.</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+You can use the **Private Extensions: Add Registry...** and</pre>
@@ -421,13 +660,13 @@
 <pre class='insert'>+right-click it in the extensions list and select **Switch Release Channels...**.</pre>
 <pre class='insert'>+Alternatively, click the **Channel** button on the extension details page.</pre>
 <pre class='insert'>+</pre>
-<pre class='insert'>+You can manually select channels with the `com-appalachia-vscode-extension-manager.channels` settings</pre>
+<pre class='insert'>+You can manually select channels with the `appa-extension-manager.channels` settings</pre>
 <pre class='insert'>+object. This is a dictionary where each key is an extension identifier</pre>
 <pre class='insert'>+(`"${publisher}.${name}"`) and each name is the dist-tag to track, as shown in</pre>
 <pre class='insert'>+the example below:</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+```JSON</pre>
-<pre class='insert'>+"com-appalachia-vscode-extension-manager.channels": {</pre>
+<pre class='insert'>+"appa-extension-manager.channels": {</pre>
 <pre class='insert'>+    "garmin.example-1": "insiders", // Tracks the 'insiders' dist-tag</pre>
 <pre class='insert'>+    "garmin.example-2": "beta",     // Tracks the 'beta' dist-tag</pre>
 <pre class='insert'>+    "garmin.example-3": "1.0.0"     // Pins the extension to version 1.0.0</pre>
@@ -470,7 +709,7 @@
 <pre class='delete'>-Open the Debug panel (`Ctrl+Shift+D`) and select the debug configuration to run:</pre>
 <pre class='insert'>+Private Extension Manager will periodically check your installed extensions for</pre>
 <pre class='insert'>+updates and notify you if any are found. You can adjust the check interval or</pre>
-<pre class='insert'>+disable it with the `com-appalachia-vscode-extension-manager.updateCheckInterval` setting.</pre>
+<pre class='insert'>+disable it with the `appa-extension-manager.updateCheckInterval` setting.</pre>
 <pre class='context'> </pre>
 <pre class='delete'>-* **Run Extension (extension)**: build the main extension and run it in an</pre>
 <pre class='delete'>-experimental instance of VS Code.</pre>
@@ -531,7 +770,7 @@
 <pre class='insert'>+extension will not transmit any data beyond what is necessary to establish the</pre>
 <pre class='insert'>+connection. The extension will not transmit any data back to Garmin.</pre></div></div><h2>RELEASELOG.md<button class='copy' onclick='navigator.clipboard.writeText("RELEASELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/RELEASELOG.md b/RELEASELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..691e840</pre>
+<pre class='file'>index 0000000..7ebd97e</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/RELEASELOG.md</pre>
 <pre class='info'>@@ -0,0 +1,14 @@</pre>
@@ -545,10 +784,10 @@
 <pre class='insert'>+```</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
-<pre class='insert'>+# 1.5.7</pre>
+<pre class='insert'>+# 1.5.8</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
-<pre class='insert'>+</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
+<pre class='insert'>+| 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
 <pre class='file'>index 0000000..397ac26</pre>
 <pre class='delete'>--- /dev/null</pre>
@@ -624,55 +863,7 @@
 <pre class='insert'>+[Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh),</pre>
 <pre class='insert'>+open a VS Code window to the remote machine, then perform the setup as described</pre>
 <pre class='insert'>+above. When you start debugging the extension, this will open another remote</pre>
-<pre class='insert'>+window with the debug extension loaded.</pre></div></div><h2>extension/.gitignore<button class='copy' onclick='navigator.clipboard.writeText("extension/.gitignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/.gitignore b/extension/.gitignore</pre></div></div><h2>deleted file mode 100644<button class='copy' onclick='navigator.clipboard.writeText("deleted file mode 100644")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>deleted file mode 100644</pre>
-<pre class='file'>index 3bb8cb8..0000000</pre>
-<pre class='delete'>--- a/remote-helper/webpack.config.js</pre>
-<pre class='insert'>+++ /dev/null</pre>
-<pre class='info'>@@ -1,44 +0,0 @@</pre>
-<pre class='delete'>-// @ts-check</pre>
-<pre class='delete'>-// See https://code.visualstudio.com/api/working-with-extensions/bundling-extension</pre>
-<pre class='delete'>-</pre>
-<pre class='delete'>-'use strict';</pre>
-<pre class='delete'>-</pre>
-<pre class='delete'>-const path = require('path');</pre>
-<pre class='delete'>-</pre>
-<pre class='delete'>-/** @type {import('webpack').Configuration} */</pre>
-<pre class='delete'>-const config = {</pre>
-<pre class='delete'>-    target: 'node',</pre>
-<pre class='delete'>-    mode: 'none',</pre>
-<pre class='delete'>-    entry: './src/extension.ts',</pre>
-<pre class='delete'>-    output: {</pre>
-<pre class='delete'>-        path: path.resolve(__dirname, 'dist'),</pre>
-<pre class='delete'>-        filename: 'extension.js',</pre>
-<pre class='delete'>-        libraryTarget: 'commonjs2',</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-    devtool: 'nosources-source-map',</pre>
-<pre class='delete'>-    infrastructureLogging: {</pre>
-<pre class='delete'>-        level: 'log', // TODO: replace with WEBPACK_CLI_START_FINISH_FORCE_LOG=1 once that is supported</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-    externals: {</pre>
-<pre class='delete'>-        vscode: 'commonjs vscode', // the vscode module is created on-the-fly and must be excluded.</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-    resolve: {</pre>
-<pre class='delete'>-        extensions: ['.ts', '.js'],</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-    module: {</pre>
-<pre class='delete'>-        rules: [</pre>
-<pre class='delete'>-            {</pre>
-<pre class='delete'>-                // pack TypeScript files with ts-loader</pre>
-<pre class='delete'>-                test: /\.ts$/,</pre>
-<pre class='delete'>-                exclude: /node_modules/,</pre>
-<pre class='delete'>-                use: [</pre>
-<pre class='delete'>-                    {</pre>
-<pre class='delete'>-                        loader: 'ts-loader',</pre>
-<pre class='delete'>-                    },</pre>
-<pre class='delete'>-                ],</pre>
-<pre class='delete'>-            },</pre>
-<pre class='delete'>-        ],</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-};</pre>
-<pre class='delete'>-</pre>
-<pre class='delete'>-module.exports = config;</pre></div></div><h2>extension/CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("extension/CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/CHANGELOG.md b/extension/CHANGELOG.md</pre></div></div><h2>extension/README.md<button class='copy' onclick='navigator.clipboard.writeText("extension/README.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/README.md b/extension/README.md</pre></div></div><h2>extension/package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("extension/package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/package-lock.json b/extension/package-lock.json</pre></div></div><h2>extension/src/test-fixtures/fixture1/.vscode/extensions.private.json<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test-fixtures/fixture1/.vscode/extensions.private.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test-fixtures/fixture1/.vscode/extensions.private.json b/extension/src/test-fixtures/fixture1/.vscode/extensions.private.json</pre></div></div><h2>extension/extensions.private.schema.json<button class='copy' onclick='navigator.clipboard.writeText("extension/extensions.private.schema.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/extensions.private.schema.json b/extensions.private.schema.json</pre>
+<pre class='insert'>+window with the debug extension loaded.</pre></div></div><h2>extension/.gitignore<button class='copy' onclick='navigator.clipboard.writeText("extension/.gitignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/.gitignore b/extension/.gitignore</pre></div></div><h2>extension/CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("extension/CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/CHANGELOG.md b/extension/CHANGELOG.md</pre></div></div><h2>extension/README.md<button class='copy' onclick='navigator.clipboard.writeText("extension/README.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/README.md b/extension/README.md</pre></div></div><h2>extension/package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("extension/package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/package-lock.json b/extension/package-lock.json</pre></div></div><h2>extension/src/test-fixtures/fixture1/.vscode/extensions.private.json<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test-fixtures/fixture1/.vscode/extensions.private.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test-fixtures/fixture1/.vscode/extensions.private.json b/extension/src/test-fixtures/fixture1/.vscode/extensions.private.json</pre></div></div><h2>extension/extensions.private.schema.json<button class='copy' onclick='navigator.clipboard.writeText("extension/extensions.private.schema.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/extensions.private.schema.json b/extensions.private.schema.json</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/extensions.private.schema.json</pre>
 <pre class='undefined'>rename to extensions.private.schema.json</pre></div></div><h2>i18n/.gitkeep<button class='copy' onclick='navigator.clipboard.writeText("i18n/.gitkeep")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/i18n/.gitkeep b/i18n/.gitkeep</pre>
@@ -741,13 +932,13 @@
 <pre class='insert'>+html-diff 7c88415ff673fa83762ca4790aa7de68811622f6 &gt; MODIFICATIONS.html</pre>
 <pre class='insert'>+</pre></div></div><h2>package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/package-lock.json b/package-lock.json</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..a148bec</pre>
+<pre class='file'>index 0000000..489a431</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/package-lock.json</pre>
 <pre class='info'>@@ -0,0 +1,5269 @@</pre>
 <pre class='insert'>+{</pre>
-<pre class='insert'>+    "name": "private-extension-manager",</pre>
-<pre class='insert'>+    "version": "1.5.7",</pre>
+<pre class='insert'>+    "name": "appa-extension-manager",</pre>
+<pre class='insert'>+    "version": "1.5.8",</pre>
 <pre class='insert'>+    "lockfileVersion": 1,</pre>
 <pre class='insert'>+    "requires": true,</pre>
 <pre class='insert'>+    "dependencies": {</pre>
@@ -6014,22 +6205,22 @@
 <pre class='insert'>+        }</pre>
 <pre class='insert'>+    }</pre>
 <pre class='insert'>+}</pre></div></div><h2>extension/package.json<button class='copy' onclick='navigator.clipboard.writeText("extension/package.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/package.json b/package.json</pre>
-<pre class='undefined'>similarity index 51%</pre>
+<pre class='undefined'>similarity index 55%</pre>
 <pre class='undefined'>rename from extension/package.json</pre>
 <pre class='undefined'>rename to package.json</pre>
-<pre class='file'>index 0a63e7b..80ac09a 100644</pre>
+<pre class='file'>index 0a63e7b..b9ac871 100644</pre>
 <pre class='delete'>--- a/extension/package.json</pre>
 <pre class='insert'>+++ b/package.json</pre>
 <pre class='info'>@@ -1,48 +1,75 @@</pre>
 <pre class='context'> {</pre>
 <pre class='delete'>-    "name": "private-extension-manager",</pre>
-<pre class='insert'>+    "name": "com-appalachia-vscode-extension-manager",</pre>
+<pre class='insert'>+    "name": "appa-extension-manager",</pre>
 <pre class='context'>     "displayName": "Private Extension Manager",</pre>
 <pre class='context'>     "description": "Manages extensions hosted in private NPM registries.",</pre>
 <pre class='delete'>-    "version": "1.5.0",</pre>
 <pre class='delete'>-    "publisher": "garmin",</pre>
 <pre class='delete'>-    "license": "Apache-2.0",</pre>
-<pre class='insert'>+    "version": "1.5.7",</pre>
+<pre class='insert'>+    "version": "1.5.8",</pre>
 <pre class='insert'>+    "engines": {</pre>
 <pre class='insert'>+        "vscode": "^1.55.0"</pre>
 <pre class='insert'>+    },</pre>
@@ -6111,15 +6302,15 @@
 <pre class='delete'>-        "onCommand:privateExtensions.configureRecommendedExtensions",</pre>
 <pre class='delete'>-        "onCommand:privateExtensions.registry.add",</pre>
 <pre class='delete'>-        "onCommand:privateExtensions.registry.remove"</pre>
-<pre class='insert'>+        "onView:com-appalachia-vscode-extension-manager.extensions",</pre>
-<pre class='insert'>+        "onView:com-appalachia-vscode-extension-manager.recommended",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.cache.delete",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.cache.garbageCollect",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.checkForUpdates",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.configureRecommendedExtensions",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.registry.add",</pre>
-<pre class='insert'>+        "onCommand:com-appalachia-vscode-extension-manager.registry.remove"</pre>
+<pre class='insert'>+        "onView:appa-extension-manager.extensions",</pre>
+<pre class='insert'>+        "onView:appa-extension-manager.recommended",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.cache.delete",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.cache.garbageCollect",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.checkForUpdates",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.configureWorkspaceRegistries",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.configureRecommendedExtensions",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.registry.add",</pre>
+<pre class='insert'>+        "onCommand:appa-extension-manager.registry.remove"</pre>
 <pre class='context'>     ],</pre>
 <pre class='delete'>-    "main": "./dist/extension.js",</pre>
 <pre class='context'>     "contributes": {</pre>
@@ -6130,19 +6321,19 @@
 <pre class='context'>             "title": "%configuration.title%",</pre>
 <pre class='context'>             "properties": {</pre>
 <pre class='delete'>-                "privateExtensions.registries": {</pre>
-<pre class='insert'>+                "com-appalachia-vscode-extension-manager.registries": {</pre>
+<pre class='insert'>+                "appa-extension-manager.registries": {</pre>
 <pre class='context'>                     "type": "array",</pre>
 <pre class='context'>                     "scope": "machine",</pre>
 <pre class='context'>                     "description": "%configuration.registries.description%"</pre>
 <pre class='context'>                 },</pre>
 <pre class='delete'>-                "privateExtensions.channels": {</pre>
-<pre class='insert'>+                "com-appalachia-vscode-extension-manager.channels": {</pre>
+<pre class='insert'>+                "appa-extension-manager.channels": {</pre>
 <pre class='context'>                     "type": "object",</pre>
 <pre class='context'>                     "scope": "machine",</pre>
 <pre class='context'>                     "description": "%configuration.channels.description%"</pre>
 <pre class='context'>                 },</pre>
 <pre class='delete'>-                "privateExtensions.updateCheckInterval": {</pre>
-<pre class='insert'>+                "com-appalachia-vscode-extension-manager.updateCheckInterval": {</pre>
+<pre class='insert'>+                "appa-extension-manager.updateCheckInterval": {</pre>
 <pre class='context'>                     "type": "number",</pre>
 <pre class='context'>                     "scope": "machine",</pre>
 <pre class='context'>                     "description": "%configuration.updateCheckInterval.description%",</pre>
@@ -6151,56 +6342,56 @@
 <pre class='context'>         "commands": [</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.cache.delete",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.cache.delete",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.cache.delete",</pre>
 <pre class='context'>                 "title": "%command.cache.delete.title%",</pre>
 <pre class='context'>                 "category": "%command.category%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.cache.garbageCollect",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.cache.garbageCollect",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.cache.garbageCollect",</pre>
 <pre class='context'>                 "title": "%command.cache.garbageCollect.title%",</pre>
 <pre class='context'>                 "category": "%command.category%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.checkForUpdates",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.checkForUpdates",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.checkForUpdates",</pre>
 <pre class='context'>                 "title": "%command.checkForUpdates.title%",</pre>
 <pre class='context'>                 "category": "%command.category%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.configureWorkspaceRegistries",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.configureWorkspaceRegistries",</pre>
 <pre class='context'>                 "title": "%command.configureWorkspaceRegistries.title%",</pre>
 <pre class='context'>                 "category": "%command.category%",</pre>
 <pre class='context'>                 "icon": "$(edit)"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.configureRecommendedExtensions",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.configureRecommendedExtensions",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.configureRecommendedExtensions",</pre>
 <pre class='context'>                 "title": "%command.configureRecommendedExtensions.title%",</pre>
 <pre class='context'>                 "category": "%command.category%",</pre>
 <pre class='context'>                 "icon": "$(edit)"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.refresh",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.refresh",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.refresh",</pre>
 <pre class='context'>                 "title": "%command.refresh.title%",</pre>
 <pre class='context'>                 "category": "%command.category%",</pre>
 <pre class='context'>                 "icon": "$(refresh)"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.install",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.install",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.install",</pre>
 <pre class='context'>                 "title": "%command.extension.install.title%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.uninstall",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.uninstall",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.uninstall",</pre>
 <pre class='context'>                 "title": "%command.extension.uninstall.title%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.update",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.update",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.update",</pre>
 <pre class='context'>                 "title": "%command.extension.update.title%",</pre>
 <pre class='context'>                 "icon": {</pre>
 <pre class='context'>                     "light": "media/light/update.svg",</pre>
@@ -6209,29 +6400,29 @@
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.install.anotherVersion",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.install.anotherVersion",</pre>
 <pre class='context'>                 "title": "%command.extension.install.anotherVersion.title%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.switchChannels",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.switchChannels",</pre>
 <pre class='context'>                 "title": "%command.extension.switchChannels.title%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.extension.copyInformation",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.extension.copyInformation",</pre>
 <pre class='context'>                 "title": "%command.extension.copyInformation.title%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.registry.add",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.registry.add",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.registry.add",</pre>
 <pre class='context'>                 "title": "%command.registry.add.title%",</pre>
 <pre class='context'>                 "category": "%command.category%",</pre>
 <pre class='context'>                 "icon": "$(new-folder)"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "command": "privateExtensions.registry.remove",</pre>
-<pre class='insert'>+                "command": "com-appalachia-vscode-extension-manager.registry.remove",</pre>
+<pre class='insert'>+                "command": "appa-extension-manager.registry.remove",</pre>
 <pre class='context'>                 "title": "%command.registry.remove.title%",</pre>
 <pre class='context'>                 "category": "%command.category%"</pre>
 <pre class='context'>             }</pre>
@@ -6241,26 +6432,26 @@
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "id": "privateExtensions",</pre>
 <pre class='delete'>-                    "title": "%viewsContainers.activitybar.privateExtensions.title%",</pre>
-<pre class='insert'>+                    "id": "com-appalachia-vscode-extension-manager",</pre>
-<pre class='insert'>+                    "title": "%viewsContainers.activitybar.com-appalachia-vscode-extension-manager.title%",</pre>
+<pre class='insert'>+                    "id": "appa-extension-manager",</pre>
+<pre class='insert'>+                    "title": "%viewsContainers.activitybar.appa-extension-manager.title%",</pre>
 <pre class='context'>                     "icon": "media/extensions.svg"</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             ]</pre>
 <pre class='context'>         },</pre>
 <pre class='context'>         "views": {</pre>
 <pre class='delete'>-            "privateExtensions": [</pre>
-<pre class='insert'>+            "com-appalachia-vscode-extension-manager": [</pre>
+<pre class='insert'>+            "appa-extension-manager": [</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "id": "privateExtensions.extensions",</pre>
 <pre class='delete'>-                    "name": "%views.privateExtensions.extensions.name%"</pre>
-<pre class='insert'>+                    "id": "com-appalachia-vscode-extension-manager.extensions",</pre>
-<pre class='insert'>+                    "name": "%views.com-appalachia-vscode-extension-manager.extensions.name%"</pre>
+<pre class='insert'>+                    "id": "appa-extension-manager.extensions",</pre>
+<pre class='insert'>+                    "name": "%views.appa-extension-manager.extensions.name%"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "id": "privateExtensions.recommended",</pre>
 <pre class='delete'>-                    "name": "%views.privateExtensions.recommended.name%"</pre>
-<pre class='insert'>+                    "id": "com-appalachia-vscode-extension-manager.recommended",</pre>
-<pre class='insert'>+                    "name": "%views.com-appalachia-vscode-extension-manager.recommended.name%"</pre>
+<pre class='insert'>+                    "id": "appa-extension-manager.recommended",</pre>
+<pre class='insert'>+                    "name": "%views.appa-extension-manager.recommended.name%"</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             ]</pre>
 <pre class='context'>         },</pre>
@@ -6268,27 +6459,27 @@
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "view": "privateExtensions.extensions",</pre>
 <pre class='delete'>-                "contents": "%views.privateExtensions.extensions.noExtensions%"</pre>
-<pre class='insert'>+                "view": "com-appalachia-vscode-extension-manager.extensions",</pre>
-<pre class='insert'>+                "contents": "%views.com-appalachia-vscode-extension-manager.extensions.noExtensions%"</pre>
+<pre class='insert'>+                "view": "appa-extension-manager.extensions",</pre>
+<pre class='insert'>+                "contents": "%views.appa-extension-manager.extensions.noExtensions%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "view": "privateExtensions.extensions",</pre>
 <pre class='delete'>-                "contents": "%views.privateExtensions.extensions.configure%",</pre>
-<pre class='insert'>+                "view": "com-appalachia-vscode-extension-manager.extensions",</pre>
-<pre class='insert'>+                "contents": "%views.com-appalachia-vscode-extension-manager.extensions.configure%",</pre>
+<pre class='insert'>+                "view": "appa-extension-manager.extensions",</pre>
+<pre class='insert'>+                "contents": "%views.appa-extension-manager.extensions.configure%",</pre>
 <pre class='context'>                 "when": "workbenchState != empty"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "view": "privateExtensions.recommended",</pre>
 <pre class='delete'>-                "contents": "%views.privateExtensions.recommended.noExtensions%"</pre>
-<pre class='insert'>+                "view": "com-appalachia-vscode-extension-manager.recommended",</pre>
-<pre class='insert'>+                "contents": "%views.com-appalachia-vscode-extension-manager.recommended.noExtensions%"</pre>
+<pre class='insert'>+                "view": "appa-extension-manager.recommended",</pre>
+<pre class='insert'>+                "contents": "%views.appa-extension-manager.recommended.noExtensions%"</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
 <pre class='delete'>-                "view": "privateExtensions.recommended",</pre>
 <pre class='delete'>-                "contents": "%views.privateExtensions.recommended.configure%",</pre>
-<pre class='insert'>+                "view": "com-appalachia-vscode-extension-manager.recommended",</pre>
-<pre class='insert'>+                "contents": "%views.com-appalachia-vscode-extension-manager.recommended.configure%",</pre>
+<pre class='insert'>+                "view": "appa-extension-manager.recommended",</pre>
+<pre class='insert'>+                "contents": "%views.appa-extension-manager.recommended.configure%",</pre>
 <pre class='context'>                 "when": "workbenchState != empty"</pre>
 <pre class='context'>             }</pre>
 <pre class='context'>         ],</pre>
@@ -6297,36 +6488,36 @@
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.configureWorkspaceRegistries",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.extensions &amp;&amp; workbenchState != empty",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.configureWorkspaceRegistries",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.extensions &amp;&amp; workbenchState != empty",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.configureWorkspaceRegistries",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.extensions &amp;&amp; workbenchState != empty",</pre>
 <pre class='context'>                     "group": "navigation"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.refresh",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.extensions",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.refresh",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.extensions",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.refresh",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.extensions",</pre>
 <pre class='context'>                     "group": "navigation"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.checkForUpdates",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.extensions",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.checkForUpdates",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.extensions",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.checkForUpdates",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.extensions",</pre>
 <pre class='context'>                     "group": "extensions"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.registry.add",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.extensions",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.registry.add",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.extensions",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.registry.add",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.extensions",</pre>
 <pre class='context'>                     "group": "registry"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.configureRecommendedExtensions",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.recommended &amp;&amp; workbenchState != empty",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.configureRecommendedExtensions",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.recommended &amp;&amp; workbenchState != empty",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.configureRecommendedExtensions",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.recommended &amp;&amp; workbenchState != empty",</pre>
 <pre class='context'>                     "group": "navigation"</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             ],</pre>
@@ -6334,87 +6525,87 @@
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.install",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /available/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.install",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /available/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.install",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /available/",</pre>
 <pre class='context'>                     "group": "install"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.uninstall",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /installed|update/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.uninstall",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.uninstall",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
 <pre class='context'>                     "group": "install"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.update",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /update/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.update",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /update/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.update",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /update/",</pre>
 <pre class='context'>                     "group": "inline"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.install.anotherVersion",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /installed|update/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.install.anotherVersion",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
 <pre class='context'>                     "group": "installVersion"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.switchChannels",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /installed|update/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.switchChannels",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /installed|update/",</pre>
 <pre class='context'>                     "group": "installVersion"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.copyInformation",</pre>
 <pre class='delete'>-                    "when": "view =~ /^privateExtensions/ &amp;&amp; viewItem =~ /extension/",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",</pre>
-<pre class='insert'>+                    "when": "view =~ /^com-appalachia-vscode-extension-manager/ &amp;&amp; viewItem =~ /extension/",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.copyInformation",</pre>
+<pre class='insert'>+                    "when": "view =~ /^appa-extension-manager/ &amp;&amp; viewItem =~ /extension/",</pre>
 <pre class='context'>                     "group": "other"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.registry.remove",</pre>
 <pre class='delete'>-                    "when": "view == privateExtensions.extensions &amp;&amp; viewItem == registry.user",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.registry.remove",</pre>
-<pre class='insert'>+                    "when": "view == com-appalachia-vscode-extension-manager.extensions &amp;&amp; viewItem == registry.user",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.registry.remove",</pre>
+<pre class='insert'>+                    "when": "view == appa-extension-manager.extensions &amp;&amp; viewItem == registry.user",</pre>
 <pre class='context'>                     "group": "registries"</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             ],</pre>
 <pre class='context'>             "commandPalette": [</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.refresh",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.refresh",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.refresh",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.install",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.install",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.install",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.uninstall",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.uninstall",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.uninstall",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.update",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.update",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.update",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.install.anotherVersion",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.install.anotherVersion",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.install.anotherVersion",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.switchChannels",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.switchChannels",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.switchChannels",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 },</pre>
 <pre class='context'>                 {</pre>
 <pre class='delete'>-                    "command": "privateExtensions.extension.copyInformation",</pre>
-<pre class='insert'>+                    "command": "com-appalachia-vscode-extension-manager.extension.copyInformation",</pre>
+<pre class='insert'>+                    "command": "appa-extension-manager.extension.copyInformation",</pre>
 <pre class='context'>                     "when": "false"</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             ]</pre>
@@ -6442,24 +6633,11 @@
 <pre class='insert'>+        "webpack": "^5.34.0",</pre>
 <pre class='context'>         "webpack-cli": "^4.6.0"</pre>
 <pre class='context'>     },</pre>
-<pre class='context'>     "dependencies": {</pre>
-<pre class='info'>@@ -364,12 +380,5 @@</pre>
-<pre class='context'>         "semver": "^7.3.2",</pre>
-<pre class='context'>         "valid-url": "^1.0.9",</pre>
-<pre class='context'>         "vscode-nls": "^5.0.0"</pre>
-<pre class='delete'>-    },</pre>
-<pre class='delete'>-    "prettier": {</pre>
-<pre class='delete'>-        "singleQuote": true,</pre>
-<pre class='delete'>-        "trailingComma": "all",</pre>
-<pre class='delete'>-        "tabWidth": 4,</pre>
-<pre class='delete'>-        "printWidth": 120,</pre>
-<pre class='delete'>-        "endOfLine": "auto"</pre>
-<pre class='context'>     }</pre>
-<pre class='context'> }</pre></div></div><h2>extension/package.nls.json<button class='copy' onclick='navigator.clipboard.writeText("extension/package.nls.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/package.nls.json b/package.nls.json</pre>
-<pre class='undefined'>similarity index 60%</pre>
+<pre class='context'>     "dependencies": {</pre></div></div><h2>extension/package.nls.json<button class='copy' onclick='navigator.clipboard.writeText("extension/package.nls.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/package.nls.json b/package.nls.json</pre>
+<pre class='undefined'>similarity index 64%</pre>
 <pre class='undefined'>rename from extension/package.nls.json</pre>
 <pre class='undefined'>rename to package.nls.json</pre>
-<pre class='file'>index 809e200..f95835e 100644</pre>
+<pre class='file'>index 809e200..de4c1ed 100644</pre>
 <pre class='delete'>--- a/extension/package.nls.json</pre>
 <pre class='insert'>+++ b/package.nls.json</pre>
 <pre class='info'>@@ -18,11 +18,11 @@</pre>
@@ -6473,13 +6651,13 @@
 <pre class='delete'>-    "views.privateExtensions.recommended.name": "Recommended",</pre>
 <pre class='delete'>-    "views.privateExtensions.recommended.noExtensions": "No recommended extensions found.",</pre>
 <pre class='delete'>-    "views.privateExtensions.recommended.configure": "[Configure Recommended Extensions](command:privateExtensions.configureRecommendedExtensions)"</pre>
-<pre class='insert'>+    "viewsContainers.activitybar.com-appalachia-vscode-extension-manager.title": "Private Extensions",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.extensions.name": "Extensions",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/joelspadin-garmin/vscode-private-extension-manager/tree/master/extension#readme)",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.extensions.configure": "[Configure Workspace Registries](command:com-appalachia-vscode-extension-manager.configureWorkspaceRegistries)",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.recommended.name": "Recommended",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.recommended.noExtensions": "No recommended extensions found.",</pre>
-<pre class='insert'>+    "views.com-appalachia-vscode-extension-manager.recommended.configure": "[Configure Recommended Extensions](command:com-appalachia-vscode-extension-manager.configureRecommendedExtensions)"</pre>
+<pre class='insert'>+    "viewsContainers.activitybar.appa-extension-manager.title": "Private Extensions",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.extensions.name": "Extensions",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/tree/master/#readme)",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.extensions.configure": "[Configure Workspace Registries](command:appa-extension-manager.configureWorkspaceRegistries)",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.recommended.name": "Recommended",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.recommended.noExtensions": "No recommended extensions found.",</pre>
+<pre class='insert'>+    "views.appa-extension-manager.recommended.configure": "[Configure Recommended Extensions](command:appa-extension-manager.configureRecommendedExtensions)"</pre>
 <pre class='context'> }</pre>
 <pre class='undefined'>\ No newline at end of file</pre></div></div><h2>private-extension-manager.code-workspace<button class='copy' onclick='navigator.clipboard.writeText("private-extension-manager.code-workspace")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/private-extension-manager.code-workspace b/private-extension-manager.code-workspace</pre></div></div><h2>remote-helper/.editorconfig<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.editorconfig")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.editorconfig b/remote-helper/.editorconfig</pre></div></div><h2>remote-helper/.eslintrc.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.eslintrc.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.eslintrc.json b/remote-helper/.eslintrc.json</pre></div></div><h2>remote-helper/.vscode/extensions.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.vscode/extensions.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.vscode/extensions.json b/remote-helper/.vscode/extensions.json</pre></div></div><h2>remote-helper/.vscode/launch.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.vscode/launch.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.vscode/launch.json b/remote-helper/.vscode/launch.json</pre></div></div><h2>remote-helper/.vscode/settings.default.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.vscode/settings.default.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.vscode/settings.default.json b/remote-helper/.vscode/settings.default.json</pre></div></div><h2>remote-helper/.vscode/tasks.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.vscode/tasks.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.vscode/tasks.json b/remote-helper/.vscode/tasks.json</pre></div></div><h2>remote-helper/.vscodeignore<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/.vscodeignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/.vscodeignore b/remote-helper/.vscodeignore</pre></div></div><h2>remote-helper/CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/CHANGELOG.md b/remote-helper/CHANGELOG.md</pre></div></div><h2>remote-helper/LICENSE<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/LICENSE")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/LICENSE b/remote-helper/LICENSE</pre></div></div><h2>remote-helper/README.md<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/README.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/README.md b/remote-helper/README.md</pre></div></div><h2>remote-helper/media/icon.png<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/media/icon.png")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/media/icon.png b/remote-helper/media/icon.png</pre></div></div><h2>remote-helper/media/icon.svg<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/media/icon.svg")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/media/icon.svg b/remote-helper/media/icon.svg</pre></div></div><h2>remote-helper/package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/package-lock.json b/remote-helper/package-lock.json</pre></div></div><h2>remote-helper/package.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/package.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/package.json b/remote-helper/package.json</pre></div></div><h2>remote-helper/src/extension.ts<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/src/extension.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/src/extension.ts b/remote-helper/src/extension.ts</pre></div></div><h2>remote-helper/src/test/runTest.ts<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/src/test/runTest.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/src/test/runTest.ts b/remote-helper/src/test/runTest.ts</pre></div></div><h2>remote-helper/src/test/suite/extension.test.ts<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/src/test/suite/extension.test.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/src/test/suite/extension.test.ts b/remote-helper/src/test/suite/extension.test.ts</pre></div></div><h2>remote-helper/src/test/suite/index.ts<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/src/test/suite/index.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/src/test/suite/index.ts b/remote-helper/src/test/suite/index.ts</pre></div></div><h2>remote-helper/tsconfig.json<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/tsconfig.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/tsconfig.json b/remote-helper/tsconfig.json</pre></div></div><h2>remote-helper/webpack.config.js<button class='copy' onclick='navigator.clipboard.writeText("remote-helper/webpack.config.js")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/remote-helper/webpack.config.js b/remote-helper/webpack.config.js</pre></div></div><h2>extension/src/Package.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/Package.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/Package.ts b/src/Package.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
@@ -6488,7 +6666,7 @@
 <pre class='undefined'>similarity index 99%</pre>
 <pre class='undefined'>rename from extension/src/Registry.ts</pre>
 <pre class='undefined'>rename to src/Registry.ts</pre>
-<pre class='file'>index 4e405ed..b01fa11 100644</pre>
+<pre class='file'>index 4e405ed..c48a9fe 100644</pre>
 <pre class='delete'>--- a/extension/src/Registry.ts</pre>
 <pre class='insert'>+++ b/src/Registry.ts</pre>
 <pre class='info'>@@ -208,7 +208,7 @@ export class Registry {</pre>
@@ -6496,14 +6674,14 @@
 <pre class='context'>                         localize(</pre>
 <pre class='context'>                             'invalid.channel',</pre>
 <pre class='delete'>-                            '{0} Your "privateExtensions.channels" setting may be invalid. {1} to fix.',</pre>
-<pre class='insert'>+                            '{0} Your "com-appalachia-vscode-extension-manager.channels" setting may be invalid. {1} to fix.',</pre>
+<pre class='insert'>+                            '{0} Your "appa-extension-manager.channels" setting may be invalid. {1} to fix.',</pre>
 <pre class='context'>                             ex.message,</pre>
 <pre class='context'>                             settingsJsonLink,</pre>
 <pre class='context'>                         ),</pre></div></div><h2>extension/src/RegistryProvider.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/RegistryProvider.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/RegistryProvider.ts b/src/RegistryProvider.ts</pre>
 <pre class='undefined'>similarity index 97%</pre>
 <pre class='undefined'>rename from extension/src/RegistryProvider.ts</pre>
 <pre class='undefined'>rename to src/RegistryProvider.ts</pre>
-<pre class='file'>index 1ed132a..2fef5e4 100644</pre>
+<pre class='file'>index 1ed132a..5d3ade4 100644</pre>
 <pre class='delete'>--- a/extension/src/RegistryProvider.ts</pre>
 <pre class='insert'>+++ b/src/RegistryProvider.ts</pre>
 <pre class='info'>@@ -177,7 +177,7 @@ export class RegistryProvider implements Disposable {</pre>
@@ -6511,7 +6689,7 @@
 <pre class='context'>             userRegistries,</pre>
 <pre class='context'>             t.array(UserRegistry),</pre>
 <pre class='delete'>-            localize('user.setting.invalid', 'privateExtensions.registries setting is invalid'),</pre>
-<pre class='insert'>+            localize('user.setting.invalid', 'com-appalachia-vscode-extension-manager.registries setting is invalid'),</pre>
+<pre class='insert'>+            localize('user.setting.invalid', 'appa-extension-manager.registries setting is invalid'),</pre>
 <pre class='context'>         );</pre>
 <pre class='context'> </pre>
 <pre class='context'>         return userRegistries;</pre>
@@ -6521,15 +6699,15 @@
 <pre class='context'>         if (</pre>
 <pre class='delete'>-            e.affectsConfiguration('privateExtensions.registries') ||</pre>
 <pre class='delete'>-            e.affectsConfiguration('privateExtensions.channels')</pre>
-<pre class='insert'>+            e.affectsConfiguration('com-appalachia-vscode-extension-manager.registries') ||</pre>
-<pre class='insert'>+            e.affectsConfiguration('com-appalachia-vscode-extension-manager.channels')</pre>
+<pre class='insert'>+            e.affectsConfiguration('appa-extension-manager.registries') ||</pre>
+<pre class='insert'>+            e.affectsConfiguration('appa-extension-manager.channels')</pre>
 <pre class='context'>         ) {</pre>
 <pre class='context'>             this.isStale = true;</pre>
 <pre class='context'>             this._onDidChangeRegistries.fire();</pre></div></div><h2>extension/src/UpdateChecker.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/UpdateChecker.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/UpdateChecker.ts b/src/UpdateChecker.ts</pre>
-<pre class='undefined'>similarity index 95%</pre>
+<pre class='undefined'>similarity index 96%</pre>
 <pre class='undefined'>rename from extension/src/UpdateChecker.ts</pre>
 <pre class='undefined'>rename to src/UpdateChecker.ts</pre>
-<pre class='file'>index bec579f..2a27f2c 100644</pre>
+<pre class='file'>index bec579f..27bfc2a 100644</pre>
 <pre class='delete'>--- a/extension/src/UpdateChecker.ts</pre>
 <pre class='insert'>+++ b/src/UpdateChecker.ts</pre>
 <pre class='info'>@@ -101,7 +101,7 @@ export class UpdateChecker implements Disposable {</pre>
@@ -6537,7 +6715,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     private onDidChangeConfiguration(e: vscode.ConfigurationChangeEvent) {</pre>
 <pre class='delete'>-        if (e.affectsConfiguration('privateExtensions.updateCheckInterval')) {</pre>
-<pre class='insert'>+        if (e.affectsConfiguration('com-appalachia-vscode-extension-manager.updateCheckInterval')) {</pre>
+<pre class='insert'>+        if (e.affectsConfiguration('appa-extension-manager.updateCheckInterval')) {</pre>
 <pre class='context'>             this.intervalMS = getUpdateIntervalMS();</pre>
 <pre class='context'>             this.setAutomaticCheckInterval();</pre>
 <pre class='context'>         }</pre>
@@ -6546,17 +6724,17 @@
 <pre class='context'> </pre>
 <pre class='context'>         if (response === showUpdates) {</pre>
 <pre class='delete'>-            await vscode.commands.executeCommand('privateExtensions.extensions.focus');</pre>
-<pre class='insert'>+            await vscode.commands.executeCommand('com-appalachia-vscode-extension-manager.extensions.focus');</pre>
+<pre class='insert'>+            await vscode.commands.executeCommand('appa-extension-manager.extensions.focus');</pre>
 <pre class='context'>         } else if (response === updateAll) {</pre>
 <pre class='context'>             await updateExtensions(this.extensionInfo, updates);</pre>
 <pre class='context'>         }</pre></div></div><h2>extension/src/commandManager.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commandManager.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commandManager.ts b/src/commandManager.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/commandManager.ts</pre>
 <pre class='undefined'>rename to src/commandManager.ts</pre></div></div><h2>extension/src/commands/cacheCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/cacheCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/cacheCommands.ts b/src/commands/cacheCommands.ts</pre>
-<pre class='undefined'>similarity index 91%</pre>
+<pre class='undefined'>similarity index 92%</pre>
 <pre class='undefined'>rename from extension/src/commands/cacheCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/cacheCommands.ts</pre>
-<pre class='file'>index b87bb12..ec65aa0 100644</pre>
+<pre class='file'>index b87bb12..3ee4bcd 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/cacheCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/cacheCommands.ts</pre>
 <pre class='info'>@@ -9,7 +9,7 @@ import { getNpmCacheDir, rimrafPromise } from '../util';</pre>
@@ -6564,7 +6742,7 @@
 <pre class='context'> </pre>
 <pre class='context'> export class DeleteCacheCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.cache.delete';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.cache.delete';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.cache.delete';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public async execute(): Promise&lt;void&gt; {</pre>
 <pre class='context'>         const cache = getNpmCacheDir();</pre>
@@ -6573,14 +6751,14 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class GarbageCollectCacheCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.cache.garbageCollect';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.cache.garbageCollect';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.cache.garbageCollect';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public async execute(): Promise&lt;void&gt; {</pre>
 <pre class='context'>         const cache = getNpmCacheDir();</pre></div></div><h2>extension/src/commands/configCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/configCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/configCommands.ts b/src/commands/configCommands.ts</pre>
-<pre class='undefined'>similarity index 93%</pre>
+<pre class='undefined'>similarity index 94%</pre>
 <pre class='undefined'>rename from extension/src/commands/configCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/configCommands.ts</pre>
-<pre class='file'>index 3e358e9..8a43737 100644</pre>
+<pre class='file'>index 3e358e9..a3e9adb 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/configCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/configCommands.ts</pre>
 <pre class='info'>@@ -11,7 +11,7 @@ import { pickWorkspaceFolder } from '../workspace';</pre>
@@ -6588,7 +6766,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class ConfigureWorkspaceRegistries implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.configureWorkspaceRegistries';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.configureWorkspaceRegistries';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.configureWorkspaceRegistries';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public async execute(): Promise&lt;void&gt; {</pre>
 <pre class='context'>         await openExtensionsFileToElement('registries');</pre>
@@ -6597,14 +6775,14 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class ConfigureRecommendedExtensions implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.configureRecommendedExtensions';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.configureRecommendedExtensions';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.configureRecommendedExtensions';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public async execute(): Promise&lt;void&gt; {</pre>
 <pre class='context'>         await openExtensionsFileToElement('recommendations');</pre></div></div><h2>extension/src/commands/extensionCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/extensionCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/extensionCommands.ts b/src/commands/extensionCommands.ts</pre>
-<pre class='undefined'>similarity index 95%</pre>
+<pre class='undefined'>similarity index 96%</pre>
 <pre class='undefined'>rename from extension/src/commands/extensionCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/extensionCommands.ts</pre>
-<pre class='file'>index cb115d2..1bf4966 100644</pre>
+<pre class='file'>index cb115d2..08d77fe 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/extensionCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/extensionCommands.ts</pre>
 <pre class='info'>@@ -17,7 +17,7 @@ const localize = nls.loadMessageBundle();</pre>
@@ -6612,7 +6790,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class ShowExtensionCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.show';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.show';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.show';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(private readonly registryView: RegistryView) {}</pre>
 <pre class='context'> </pre>
@@ -6621,7 +6799,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class InstallExtensionCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.install';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.install';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.install';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(</pre>
 <pre class='context'>         private readonly registryProvider: RegistryProvider,</pre>
@@ -6630,7 +6808,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class UpdateExtensionCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.update';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.update';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.update';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(</pre>
 <pre class='context'>         private readonly registryProvider: RegistryProvider,</pre>
@@ -6639,7 +6817,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class UninstallExtensionCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.uninstall';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.uninstall';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.uninstall';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(private readonly extensionInfo: ExtensionInfoService) {}</pre>
 <pre class='context'> </pre>
@@ -6648,7 +6826,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class InstallAnotherVersionCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.install.anotherVersion';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.install.anotherVersion';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.install.anotherVersion';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(private readonly registryProvider: RegistryProvider) {}</pre>
 <pre class='context'> </pre>
@@ -6657,7 +6835,7 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class SwitchChannelsCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.switchChannels';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.switchChannels';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.switchChannels';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(private readonly registryProvider: RegistryProvider) {}</pre>
 <pre class='context'> </pre>
@@ -6666,17 +6844,17 @@
 <pre class='context'>  */</pre>
 <pre class='context'> export class CopyExtensionInformationCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.extension.copyInformation';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.extension.copyInformation';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.extension.copyInformation';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public async execute(extension: Package): Promise&lt;void&gt; {</pre>
 <pre class='context'>         const name = localize('extensionInfoName', 'Name: {0}', extension.displayName);</pre></div></div><h2>extension/src/commands/index.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/index.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/index.ts b/src/commands/index.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/commands/index.ts</pre>
 <pre class='undefined'>rename to src/commands/index.ts</pre></div></div><h2>extension/src/commands/registryCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/registryCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/registryCommands.ts b/src/commands/registryCommands.ts</pre>
-<pre class='undefined'>similarity index 91%</pre>
+<pre class='undefined'>similarity index 92%</pre>
 <pre class='undefined'>rename from extension/src/commands/registryCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/registryCommands.ts</pre>
-<pre class='file'>index ea172a0..1c3d8b4 100644</pre>
+<pre class='file'>index ea172a0..da70021 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/registryCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/registryCommands.ts</pre>
 <pre class='info'>@@ -9,7 +9,7 @@ import { RegistryProvider } from '../RegistryProvider';</pre>
@@ -6684,7 +6862,7 @@
 <pre class='context'> </pre>
 <pre class='context'> export class AddUserRegistryCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.registry.add';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.registry.add';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.registry.add';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public constructor(private readonly registryProvider: RegistryProvider) {}</pre>
 <pre class='context'> </pre>
@@ -6693,7 +6871,7 @@
 <pre class='context'>             localize(</pre>
 <pre class='context'>                 'registry.added',</pre>
 <pre class='delete'>-                'Registry "{0}" added. {1} and edit "privateExtensions.registries" to configure authentication or other settings.',</pre>
-<pre class='insert'>+                'Registry "{0}" added. {1} and edit "com-appalachia-vscode-extension-manager.registries" to configure authentication or other settings.',</pre>
+<pre class='insert'>+                'Registry "{0}" added. {1} and edit "appa-extension-manager.registries" to configure authentication or other settings.',</pre>
 <pre class='context'>                 name,</pre>
 <pre class='context'>                 settingsJsonLink,</pre>
 <pre class='context'>             ),</pre>
@@ -6702,14 +6880,14 @@
 <pre class='context'> </pre>
 <pre class='context'> export class RemoveUserRegistryCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.registry.remove';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.registry.remove';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.registry.remove';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public constructor(private readonly registryProvider: RegistryProvider) {}</pre>
 <pre class='context'> </pre></div></div><h2>extension/src/commands/updateCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/updateCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/updateCommands.ts b/src/commands/updateCommands.ts</pre>
-<pre class='undefined'>similarity index 76%</pre>
+<pre class='undefined'>similarity index 80%</pre>
 <pre class='undefined'>rename from extension/src/commands/updateCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/updateCommands.ts</pre>
-<pre class='file'>index b5fd147..ad17739 100644</pre>
+<pre class='file'>index b5fd147..49e5721 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/updateCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/updateCommands.ts</pre>
 <pre class='info'>@@ -2,7 +2,7 @@ import { Command } from '../commandManager';</pre>
@@ -6717,7 +6895,7 @@
 <pre class='context'> </pre>
 <pre class='context'> export class CheckForUpdatesCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.checkForUpdates';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.checkForUpdates';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.checkForUpdates';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public constructor(private readonly updateChecker: UpdateChecker) {}</pre>
 <pre class='context'> </pre>
@@ -6726,14 +6904,14 @@
 <pre class='context'> </pre>
 <pre class='context'> export class UpdateAllExtensionsCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.updateAllExtensions';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.updateAllExtensions';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.updateAllExtensions';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     public constructor(private readonly updateChecker: UpdateChecker) {}</pre>
 <pre class='context'> </pre></div></div><h2>extension/src/commands/viewCommands.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/commands/viewCommands.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/commands/viewCommands.ts b/src/commands/viewCommands.ts</pre>
-<pre class='undefined'>similarity index 79%</pre>
+<pre class='undefined'>similarity index 83%</pre>
 <pre class='undefined'>rename from extension/src/commands/viewCommands.ts</pre>
 <pre class='undefined'>rename to src/commands/viewCommands.ts</pre>
-<pre class='file'>index 941fff1..dc38714 100644</pre>
+<pre class='file'>index 941fff1..b977d78 100644</pre>
 <pre class='delete'>--- a/extension/src/commands/viewCommands.ts</pre>
 <pre class='insert'>+++ b/src/commands/viewCommands.ts</pre>
 <pre class='info'>@@ -2,7 +2,7 @@ import { Command } from '../commandManager';</pre>
@@ -6741,7 +6919,7 @@
 <pre class='context'> </pre>
 <pre class='context'> export class RefreshCommand implements Command {</pre>
 <pre class='delete'>-    public readonly id = 'privateExtensions.refresh';</pre>
-<pre class='insert'>+    public readonly id = 'com-appalachia-vscode-extension-manager.refresh';</pre>
+<pre class='insert'>+    public readonly id = 'appa-extension-manager.refresh';</pre>
 <pre class='context'> </pre>
 <pre class='context'>     constructor(private readonly registryView: RegistryView) {}</pre>
 <pre class='context'> </pre></div></div><h2>extension/src/context.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/context.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/context.ts b/src/context.ts</pre>
@@ -6751,9 +6929,30 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/extension.ts</pre>
 <pre class='undefined'>rename to src/extension.ts</pre></div></div><h2>extension/src/extensionInfo.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/extensionInfo.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/extensionInfo.ts b/src/extensionInfo.ts</pre>
-<pre class='undefined'>similarity index 100%</pre>
+<pre class='undefined'>similarity index 98%</pre>
 <pre class='undefined'>rename from extension/src/extensionInfo.ts</pre>
-<pre class='undefined'>rename to src/extensionInfo.ts</pre></div></div><h2>extension/src/extensionsFileFeatures.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/extensionsFileFeatures.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/extensionsFileFeatures.ts b/src/extensionsFileFeatures.ts</pre>
+<pre class='undefined'>rename to src/extensionInfo.ts</pre>
+<pre class='file'>index 9f69b9a..b48f70b 100644</pre>
+<pre class='delete'>--- a/extension/src/extensionInfo.ts</pre>
+<pre class='insert'>+++ b/src/extensionInfo.ts</pre>
+<pre class='info'>@@ -60,7 +60,7 @@ export class ExtensionInfoService implements vscode.Disposable {</pre>
+<pre class='context'> </pre>
+<pre class='context'>         try {</pre>
+<pre class='context'>             context.subscriptions.push(</pre>
+<pre class='delete'>-                vscode.commands.registerCommand('_privateExtensionManager.notifyExtensionsChanged', () =&gt;</pre>
+<pre class='insert'>+                vscode.commands.registerCommand('appa-extension-manager.notifyExtensionsChanged', () =&gt;</pre>
+<pre class='context'>                     this._onDidChangeOtherExtension.fire(),</pre>
+<pre class='context'>                 ),</pre>
+<pre class='context'>             );</pre>
+<pre class='info'>@@ -239,7 +239,7 @@ export class ExtensionInfoService implements vscode.Disposable {</pre>
+<pre class='context'>         if (vscode.env.remoteName) {</pre>
+<pre class='context'>             try {</pre>
+<pre class='context'>                 const uiExtension = await vscode.commands.executeCommand&lt;RemoteHelperExtensionInfo&gt;(</pre>
+<pre class='delete'>-                    '_privateExtensionManager.remoteHelper.getExtension',</pre>
+<pre class='insert'>+                    '_appa-extension-manager.remoteHelper.getExtension',</pre>
+<pre class='context'>                     extensionId,</pre>
+<pre class='context'>                 );</pre>
+<pre class='context'> </pre></div></div><h2>extension/src/extensionsFileFeatures.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/extensionsFileFeatures.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/extensionsFileFeatures.ts b/src/extensionsFileFeatures.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/extensionsFileFeatures.ts</pre>
 <pre class='undefined'>rename to src/extensionsFileFeatures.ts</pre></div></div><h2>extension/src/extensionsFileTemplate.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/extensionsFileTemplate.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/extensionsFileTemplate.ts b/src/extensionsFileTemplate.ts</pre>
@@ -6766,9 +6965,21 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/install.ts</pre>
 <pre class='undefined'>rename to src/install.ts</pre></div></div><h2>extension/src/logger.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/logger.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/logger.ts b/src/logger.ts</pre>
-<pre class='undefined'>similarity index 100%</pre>
+<pre class='undefined'>similarity index 90%</pre>
 <pre class='undefined'>rename from extension/src/logger.ts</pre>
-<pre class='undefined'>rename to src/logger.ts</pre></div></div><h2>extension/src/releaseChannel.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/releaseChannel.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/releaseChannel.ts b/src/releaseChannel.ts</pre>
+<pre class='undefined'>rename to src/logger.ts</pre>
+<pre class='file'>index 3430702..de1bfc6 100644</pre>
+<pre class='delete'>--- a/extension/src/logger.ts</pre>
+<pre class='insert'>+++ b/src/logger.ts</pre>
+<pre class='info'>@@ -19,7 +19,7 @@ let logger: Logger | undefined;</pre>
+<pre class='context'>  */</pre>
+<pre class='context'> export function getLogger(): Logger {</pre>
+<pre class='context'>     if (!logger) {</pre>
+<pre class='delete'>-        logger = new Logger('Private Extension Manager');</pre>
+<pre class='insert'>+        logger = new Logger('Extension Manager');</pre>
+<pre class='context'>     }</pre>
+<pre class='context'> </pre>
+<pre class='context'>     return logger;</pre></div></div><h2>extension/src/releaseChannel.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/releaseChannel.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/releaseChannel.ts b/src/releaseChannel.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/releaseChannel.ts</pre>
 <pre class='undefined'>rename to src/releaseChannel.ts</pre></div></div><h2>extension/src/remote.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/remote.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/remote.ts b/src/remote.ts</pre>
@@ -6781,9 +6992,30 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/test/runTest.ts</pre>
 <pre class='undefined'>rename to src/test/runTest.ts</pre></div></div><h2>extension/src/test/stubs.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/stubs.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/stubs.ts b/src/test/stubs.ts</pre>
-<pre class='undefined'>similarity index 100%</pre>
+<pre class='undefined'>similarity index 97%</pre>
 <pre class='undefined'>rename from extension/src/test/stubs.ts</pre>
-<pre class='undefined'>rename to src/test/stubs.ts</pre></div></div><h2>extension/src/test/suite/extensionInfo.test.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/suite/extensionInfo.test.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/suite/extensionInfo.test.ts b/src/test/suite/extensionInfo.test.ts</pre>
+<pre class='undefined'>rename to src/test/stubs.ts</pre>
+<pre class='file'>index e8b3db1..55b4bcd 100644</pre>
+<pre class='delete'>--- a/extension/src/test/stubs.ts</pre>
+<pre class='insert'>+++ b/src/test/stubs.ts</pre>
+<pre class='info'>@@ -73,7 +73,7 @@ export class CommonStubs implements vscode.Disposable {</pre>
+<pre class='context'>      * Stubs `vscode.extension.getExtension()` for a given extension ID so it</pre>
+<pre class='context'>      * returns that the extension is not installed on the remote machine (where the</pre>
+<pre class='context'>      * extension manager runs), then stubs the</pre>
+<pre class='delete'>-     * `_privateExtensionManager.remoteHelper.getExtension` command so it returns</pre>
+<pre class='insert'>+     * `_appa-extension-manager.remoteHelper.getExtension` command so it returns</pre>
+<pre class='context'>      * data from the given mock data object.</pre>
+<pre class='context'>      *</pre>
+<pre class='context'>      * You must also use `stubRemoteName()` so the extension appears to be</pre>
+<pre class='info'>@@ -99,7 +99,7 @@ export class CommonStubs implements vscode.Disposable {</pre>
+<pre class='context'>         this.getExtensionStub.withArgs(extensionId).returns(undefined);</pre>
+<pre class='context'> </pre>
+<pre class='context'>         this.executeCommandStub</pre>
+<pre class='delete'>-            .withArgs('_privateExtensionManager.remoteHelper.getExtension', extensionId)</pre>
+<pre class='insert'>+            .withArgs('_appa-extension-manager.remoteHelper.getExtension', extensionId)</pre>
+<pre class='context'>             .resolves(result);</pre>
+<pre class='context'>     }</pre>
+<pre class='context'> }</pre></div></div><h2>extension/src/test/suite/extensionInfo.test.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/suite/extensionInfo.test.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/suite/extensionInfo.test.ts b/src/test/suite/extensionInfo.test.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/test/suite/extensionInfo.test.ts</pre>
 <pre class='undefined'>rename to src/test/suite/extensionInfo.test.ts</pre></div></div><h2>extension/src/test/suite/index.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/suite/index.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/suite/index.ts b/src/test/suite/index.ts</pre>
@@ -6796,10 +7028,10 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/test/suite/registry.test.ts</pre>
 <pre class='undefined'>rename to src/test/suite/registry.test.ts</pre></div></div><h2>extension/src/test/suite/registryProvider.test.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/suite/registryProvider.test.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/suite/registryProvider.test.ts b/src/test/suite/registryProvider.test.ts</pre>
-<pre class='undefined'>similarity index 93%</pre>
+<pre class='undefined'>similarity index 95%</pre>
 <pre class='undefined'>rename from extension/src/test/suite/registryProvider.test.ts</pre>
 <pre class='undefined'>rename to src/test/suite/registryProvider.test.ts</pre>
-<pre class='file'>index 006cd56..d17446e 100644</pre>
+<pre class='file'>index 006cd56..5ee2179 100644</pre>
 <pre class='delete'>--- a/extension/src/test/suite/registryProvider.test.ts</pre>
 <pre class='insert'>+++ b/src/test/suite/registryProvider.test.ts</pre>
 <pre class='info'>@@ -76,7 +76,7 @@ suite('Registry Provider', function () {</pre>
@@ -6807,7 +7039,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Get registries', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', USER_REGISTRY_CONFIG);</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);</pre>
 <pre class='context'> </pre>
 <pre class='context'>         const provider = new RegistryProvider(extensionInfo);</pre>
 <pre class='context'> </pre>
@@ -6816,7 +7048,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Get recommendations', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', USER_REGISTRY_CONFIG);</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);</pre>
 <pre class='context'> </pre>
 <pre class='context'>         const provider = new RegistryProvider(extensionInfo);</pre>
 <pre class='context'> </pre>
@@ -6825,7 +7057,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Get unique packages', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', USER_REGISTRY_CONFIG);</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG);</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG);</pre>
 <pre class='context'> </pre>
 <pre class='context'>         const provider = new RegistryProvider(extensionInfo);</pre>
 <pre class='context'> </pre>
@@ -6834,7 +7066,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Tracking custom channel', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', USER_REGISTRY_CONFIG_CHANNEL);</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', USER_REGISTRY_CONFIG_CHANNEL);</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', USER_REGISTRY_CONFIG_CHANNEL);</pre>
 <pre class='context'> </pre>
 <pre class='context'>         const provider = new RegistryProvider(extensionInfo);</pre>
 <pre class='context'>         const packages = await provider.getUniquePackages();</pre>
@@ -6843,7 +7075,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Invalid user config: wrong type', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', {</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', {</pre>
 <pre class='context'>             registries: 42,</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
@@ -6852,7 +7084,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Invalid user config: missing name', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', {</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', {</pre>
 <pre class='context'>             registries: [{ registry: USER_REGISTRY_URL }],</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
@@ -6861,7 +7093,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Invalid user config: wrong name type', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', {</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', {</pre>
 <pre class='context'>             registries: [{ name: 42 }],</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
@@ -6870,7 +7102,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Invalid user config: wrong registry type', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', {</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', {</pre>
 <pre class='context'>             registries: [{ name: 'User Registry', registry: 42 }],</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
@@ -6879,7 +7111,7 @@
 <pre class='context'> </pre>
 <pre class='context'>     test('Invalid user config: mixed values', async function () {</pre>
 <pre class='delete'>-        stubGlobalConfiguration('privateExtensions', {</pre>
-<pre class='insert'>+        stubGlobalConfiguration('com-appalachia-vscode-extension-manager', {</pre>
+<pre class='insert'>+        stubGlobalConfiguration('appa-extension-manager', {</pre>
 <pre class='context'>             registries: [</pre>
 <pre class='context'>                 { name: 'User Registry 1', registry: USER_REGISTRY_URL },</pre>
 <pre class='context'>                 { name: 42, registry: WORKSPACE_REGISTRY_URL },</pre></div></div><h2>extension/src/test/util.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/test/util.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/test/util.ts b/src/test/util.ts</pre>
@@ -6898,10 +7130,10 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/typings/sanitize-filename.d.ts</pre>
 <pre class='undefined'>rename to src/typings/sanitize-filename.d.ts</pre></div></div><h2>extension/src/util.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/util.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/util.ts b/src/util.ts</pre>
-<pre class='undefined'>similarity index 97%</pre>
+<pre class='undefined'>similarity index 98%</pre>
 <pre class='undefined'>rename from extension/src/util.ts</pre>
 <pre class='undefined'>rename to src/util.ts</pre>
-<pre class='file'>index 7d5d8c3..17b92f7 100644</pre>
+<pre class='file'>index 7d5d8c3..5e4fa2a 100644</pre>
 <pre class='delete'>--- a/extension/src/util.ts</pre>
 <pre class='insert'>+++ b/src/util.ts</pre>
 <pre class='info'>@@ -11,7 +11,7 @@ import { context } from './context';</pre>
@@ -6909,17 +7141,17 @@
 <pre class='context'> </pre>
 <pre class='context'> export function getConfig(): WorkspaceConfiguration {</pre>
 <pre class='delete'>-    return workspace.getConfiguration('privateExtensions');</pre>
-<pre class='insert'>+    return workspace.getConfiguration('com-appalachia-vscode-extension-manager');</pre>
+<pre class='insert'>+    return workspace.getConfiguration('appa-extension-manager');</pre>
 <pre class='context'> }</pre>
 <pre class='context'> </pre>
 <pre class='context'> /**</pre></div></div><h2>extension/src/views/extension-details/index.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/views/extension-details/index.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/views/extension-details/index.ts b/src/views/extension-details/index.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/views/extension-details/index.ts</pre>
 <pre class='undefined'>rename to src/views/extension-details/index.ts</pre></div></div><h2>extension/src/views/extensionDetailsView.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/views/extensionDetailsView.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/views/extensionDetailsView.ts b/src/views/extensionDetailsView.ts</pre>
-<pre class='undefined'>similarity index 96%</pre>
+<pre class='undefined'>similarity index 97%</pre>
 <pre class='undefined'>rename from extension/src/views/extensionDetailsView.ts</pre>
 <pre class='undefined'>rename to src/views/extensionDetailsView.ts</pre>
-<pre class='file'>index 4e19960..e501852 100644</pre>
+<pre class='file'>index 4e19960..dbf139a 100644</pre>
 <pre class='delete'>--- a/extension/src/views/extensionDetailsView.ts</pre>
 <pre class='insert'>+++ b/src/views/extensionDetailsView.ts</pre>
 <pre class='info'>@@ -46,7 +46,7 @@ export class ExtensionDetailsView extends WebView&lt;ExtensionData&gt; {</pre>
@@ -6927,7 +7159,7 @@
 <pre class='context'>             // displayed extension may have changed.</pre>
 <pre class='context'>             vscode.workspace.onDidChangeConfiguration((e) =&gt; {</pre>
 <pre class='delete'>-                if (e.affectsConfiguration('privateExtensions.channels')) {</pre>
-<pre class='insert'>+                if (e.affectsConfiguration('com-appalachia-vscode-extension-manager.channels')) {</pre>
+<pre class='insert'>+                if (e.affectsConfiguration('appa-extension-manager.channels')) {</pre>
 <pre class='context'>                     this.refresh();</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             }),</pre>
@@ -6936,7 +7168,7 @@
 <pre class='context'>                 'prominent update',</pre>
 <pre class='context'>                 localize('update.to.version', 'Update to {0}', this.pkg.version.toString()),</pre>
 <pre class='delete'>-                'privateExtensions.extension.update',</pre>
-<pre class='insert'>+                'com-appalachia-vscode-extension-manager.extension.update',</pre>
+<pre class='insert'>+                'appa-extension-manager.extension.update',</pre>
 <pre class='context'>                 this.pkg.extensionId,</pre>
 <pre class='context'>             );</pre>
 <pre class='context'>         }</pre>
@@ -6945,7 +7177,7 @@
 <pre class='context'>                 'uninstall',</pre>
 <pre class='context'>                 localize('uninstall', 'Uninstall'),</pre>
 <pre class='delete'>-                'privateExtensions.extension.uninstall',</pre>
-<pre class='insert'>+                'com-appalachia-vscode-extension-manager.extension.uninstall',</pre>
+<pre class='insert'>+                'appa-extension-manager.extension.uninstall',</pre>
 <pre class='context'>                 this.pkg.extensionId,</pre>
 <pre class='context'>             );</pre>
 <pre class='context'> </pre>
@@ -6954,7 +7186,7 @@
 <pre class='context'>                     'channel',</pre>
 <pre class='context'>                     localize('extension.channel', 'Channel: {0}', channel),</pre>
 <pre class='delete'>-                    'privateExtensions.extension.switchChannels',</pre>
-<pre class='insert'>+                    'com-appalachia-vscode-extension-manager.extension.switchChannels',</pre>
+<pre class='insert'>+                    'appa-extension-manager.extension.switchChannels',</pre>
 <pre class='context'>                     this.pkg.extensionId,</pre>
 <pre class='context'>                 );</pre>
 <pre class='context'>             }</pre>
@@ -6963,17 +7195,17 @@
 <pre class='context'>     }</pre>
 <pre class='context'> </pre>
 <pre class='delete'>-    addActionButton(actions, 'install prominent', text, 'privateExtensions.extension.install', pkg.extensionId);</pre>
-<pre class='insert'>+    addActionButton(actions, 'install prominent', text, 'com-appalachia-vscode-extension-manager.extension.install', pkg.extensionId);</pre>
+<pre class='insert'>+    addActionButton(actions, 'install prominent', text, 'appa-extension-manager.extension.install', pkg.extensionId);</pre>
 <pre class='context'> }</pre>
 <pre class='context'> </pre>
 <pre class='context'> function getLocalResourceRoots() {</pre></div></div><h2>extension/src/views/markdownView.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/views/markdownView.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/views/markdownView.ts b/src/views/markdownView.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/views/markdownView.ts</pre>
 <pre class='undefined'>rename to src/views/markdownView.ts</pre></div></div><h2>extension/src/views/registryView.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/views/registryView.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/views/registryView.ts b/src/views/registryView.ts</pre>
-<pre class='undefined'>similarity index 96%</pre>
+<pre class='undefined'>similarity index 97%</pre>
 <pre class='undefined'>rename from extension/src/views/registryView.ts</pre>
 <pre class='undefined'>rename to src/views/registryView.ts</pre>
-<pre class='file'>index 6e3ff07..a46668b 100644</pre>
+<pre class='file'>index 6e3ff07..7db5821 100644</pre>
 <pre class='delete'>--- a/extension/src/views/registryView.ts</pre>
 <pre class='insert'>+++ b/src/views/registryView.ts</pre>
 <pre class='info'>@@ -42,13 +42,13 @@ export class RegistryView implements Disposable {</pre>
@@ -6981,14 +7213,14 @@
 <pre class='context'>     ) {</pre>
 <pre class='context'>         this.extensionsProvider = new ExtensionsProvider(registryProvider);</pre>
 <pre class='delete'>-        const extensionsTree = vscode.window.createTreeView('privateExtensions.extensions', {</pre>
-<pre class='insert'>+        const extensionsTree = vscode.window.createTreeView('com-appalachia-vscode-extension-manager.extensions', {</pre>
+<pre class='insert'>+        const extensionsTree = vscode.window.createTreeView('appa-extension-manager.extensions', {</pre>
 <pre class='context'>             treeDataProvider: this.extensionsProvider,</pre>
 <pre class='context'>             showCollapseAll: true,</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
 <pre class='context'>         this.recommendedProvider = new RecommendedProvider(registryProvider);</pre>
 <pre class='delete'>-        const recommendedTree = vscode.window.createTreeView('privateExtensions.recommended', {</pre>
-<pre class='insert'>+        const recommendedTree = vscode.window.createTreeView('com-appalachia-vscode-extension-manager.recommended', {</pre>
+<pre class='insert'>+        const recommendedTree = vscode.window.createTreeView('appa-extension-manager.recommended', {</pre>
 <pre class='context'>             treeDataProvider: this.recommendedProvider,</pre>
 <pre class='context'>         });</pre>
 <pre class='context'> </pre>
@@ -6997,13 +7229,25 @@
 <pre class='context'> </pre>
 <pre class='context'>         this.command = {</pre>
 <pre class='delete'>-            command: 'privateExtensions.extension.show',</pre>
-<pre class='insert'>+            command: 'com-appalachia-vscode-extension-manager.extension.show',</pre>
+<pre class='insert'>+            command: 'appa-extension-manager.extension.show',</pre>
 <pre class='context'>             title: localize('show.extension', 'Show Extension'),</pre>
 <pre class='context'>             arguments: [this.pkg],</pre>
 <pre class='context'>         };</pre></div></div><h2>extension/src/views/webView.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/views/webView.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/views/webView.ts b/src/views/webView.ts</pre>
-<pre class='undefined'>similarity index 100%</pre>
+<pre class='undefined'>similarity index 98%</pre>
 <pre class='undefined'>rename from extension/src/views/webView.ts</pre>
-<pre class='undefined'>rename to src/views/webView.ts</pre></div></div><h2>extension/src/workspace.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/workspace.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/workspace.ts b/src/workspace.ts</pre>
+<pre class='undefined'>rename to src/views/webView.ts</pre>
+<pre class='file'>index bca179c..aed8305 100644</pre>
+<pre class='delete'>--- a/extension/src/views/webView.ts</pre>
+<pre class='insert'>+++ b/src/views/webView.ts</pre>
+<pre class='info'>@@ -183,7 +183,7 @@ async function getUiPlatform(): Promise&lt;NodeJS.Platform&gt; {</pre>
+<pre class='context'>     if (vscode.env.remoteName) {</pre>
+<pre class='context'>         try {</pre>
+<pre class='context'>             const uiPlatform = await vscode.commands.executeCommand&lt;NodeJS.Platform&gt;(</pre>
+<pre class='delete'>-                '_privateExtensionManager.remoteHelper.getPlatform',</pre>
+<pre class='insert'>+                '_appa-extension-manager.remoteHelper.getPlatform',</pre>
+<pre class='context'>             );</pre>
+<pre class='context'> </pre>
+<pre class='context'>             if (uiPlatform) {</pre></div></div><h2>extension/src/workspace.ts<button class='copy' onclick='navigator.clipboard.writeText("extension/src/workspace.ts")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/src/workspace.ts b/src/workspace.ts</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/src/workspace.ts</pre>
 <pre class='undefined'>rename to src/workspace.ts</pre></div></div><h2>extension/tsconfig.json<button class='copy' onclick='navigator.clipboard.writeText("extension/tsconfig.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/tsconfig.json b/tsconfig.json</pre>
