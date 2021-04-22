@@ -39,21 +39,25 @@
             "url": "https://raw.githubusercontent.com/joelspadin-garmin/vscode-private-extension-manager/master/extension/LICENSE"
         }
     ],
-    "scripts": {
-        "vscode:prepublish": "npm run package",
-        "preversion": "bash ~/com.appalachia/appa/appa package preversion",
-        "version": "bash ~/com.appalachia/appa/appa package version",
-        "postversion": "bash ./modifications.sh && bash ~/com.appalachia/appa/appa package postversion",
-        "compile": "webpack",
-        "watch": "webpack --watch",
-        "package": "webpack --mode production --devtool hidden-source-map",
-        "postpack": "bash ~/com.appalachia/appa/appa package postpack-vscode",
-        "test-compile": "tsc -p ./",
-        "test-watch": "tsc -watch -p ./",
-        "pretest": "npm run test-compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
-    },
+
+  "scripts": {
+    "preversion" : "bash ~/com/appalachia/appa/appa package vscode preversion",
+    "version" : "bash ~/com/appalachia/appa/appa package vscode version",
+    "postversion" : "bash ~/com/appalachia/appa/appa package vscode postversion",
+    "prepack" : "bash ~/com/appalachia/appa/appa package vscode prepack",
+    "package" : "bash ~/com/appalachia/appa/appa package vscode package",
+    "postpack" : "bash ~/com/appalachia/appa/appa package vscode postpack",
+    "vscode:prepublish" : "bash ~/com/appalachia/appa/appa package vscode vscode_prepublish",
+    "prepublishOnly" : "bash ~/com/appalachia/appa/appa package vscode prepublishOnly",
+    "publish" : "bash ~/com/appalachia/appa/appa package vscode publish",
+    "postpublish" : "bash ~/com/appalachia/appa/appa package vscode postpublish",
+    "lint" : "bash ~/com/appalachia/appa/appa package vscode lint",
+    "compile" : "bash ~/com/appalachia/appa/appa package vscode compile",
+    "watch" : "bash ~/com/appalachia/appa/appa package vscode watch",
+    "test" : "bash ~/com/appalachia/appa/appa package vscode test",
+    "test-compile" : "bash ~/com/appalachia/appa/appa package vscode test_compile",
+    "test-watch" : "bash ~/com/appalachia/appa/appa package vscode test_watch"
+  },
     "main": "./dist/extension.js",
     "extensionKind": [
         "workspace",
