@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 455430f | 2021-04-21 | Chris Schubert | Issue with generating vsix |
+
+
+ ## Tag: v1.5.8
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| d8ece3e | 2021-04-21 | Chris Schubert | 1.5.8 |
 | 205981a | 2021-04-21 | Chris Schubert | Fixing package naming and references, figuring out js prettier... |
 | 4065172 | 2021-04-21 | Chris Schubert | Removing github workflows |
 
