@@ -117,10 +117,10 @@
 <pre class='delete'>-};</pre>
 <pre class='delete'>-</pre>
 <pre class='delete'>-module.exports = config;</pre></div></div><h2>.github/workflows/remote-helper.yml<button class='copy' onclick='navigator.clipboard.writeText(".github/workflows/remote-helper.yml")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.github/workflows/remote-helper.yml b/.github/workflows/remote-helper.yml</pre></div></div><h2>.gitignore<button class='copy' onclick='navigator.clipboard.writeText(".gitignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/.gitignore b/.gitignore</pre>
-<pre class='file'>index e96841d..4215ab4 100644</pre>
+<pre class='file'>index e96841d..959d847 100644</pre>
 <pre class='delete'>--- a/.gitignore</pre>
 <pre class='insert'>+++ b/.gitignore</pre>
-<pre class='info'>@@ -1,8 +1,14 @@</pre>
+<pre class='info'>@@ -1,8 +1,15 @@</pre>
 <pre class='insert'>+.dist</pre>
 <pre class='insert'>+.env</pre>
 <pre class='insert'>+.private</pre>
@@ -134,6 +134,7 @@
 <pre class='context'> node_modules</pre>
 <pre class='delete'>-*.vsix</pre>
 <pre class='insert'>+out</pre>
+<pre class='insert'>+*.stackdump</pre>
 <pre class='context'> </pre>
 <pre class='context'> # Keep only specific VS Code files. Others such as settings.json often contain</pre>
 <pre class='context'> # data specific to a developer's machine or preferences.</pre></div></div><h2>extension/.vscode/extensions.json<button class='copy' onclick='navigator.clipboard.writeText("extension/.vscode/extensions.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/.vscode/extensions.json b/.vscode/extensions.json</pre>
@@ -171,10 +172,10 @@
 <pre class='context'> .vscode/**</pre>
 <pre class='context'> </pre></div></div><h2>CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/CHANGELOG.md b/CHANGELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..6f21ac8</pre>
+<pre class='file'>index 0000000..e185411</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/CHANGELOG.md</pre>
-<pre class='info'>@@ -0,0 +1,212 @@</pre>
+<pre class='info'>@@ -0,0 +1,219 @@</pre>
 <pre class='insert'>+```</pre>
 <pre class='insert'>+ ________   ___  ___   ________   ________    ________   _______    ________      </pre>
 <pre class='insert'>+|\   ____\ |\  \|\  \ |\   __  \ |\   ___  \ |\   ____\ |\  ___ \  |\   ____\     </pre>
@@ -188,6 +189,13 @@
 <pre class='insert'>+## Unreleased</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| ebd2b75 | 2021-04-21 | Chris Schubert | Trying to postpack vsix |</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.9</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| 0e42026 | 2021-04-21 | Chris Schubert | 1.5.9 |</pre>
 <pre class='insert'>+| 455430f | 2021-04-21 | Chris Schubert | Issue with generating vsix |</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
@@ -777,7 +785,7 @@
 <pre class='insert'>+extension will not transmit any data beyond what is necessary to establish the</pre>
 <pre class='insert'>+connection. The extension will not transmit any data back to Garmin.</pre></div></div><h2>RELEASELOG.md<button class='copy' onclick='navigator.clipboard.writeText("RELEASELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/RELEASELOG.md b/RELEASELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..ea6def4</pre>
+<pre class='file'>index 0000000..2b115a8</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/RELEASELOG.md</pre>
 <pre class='info'>@@ -0,0 +1,14 @@</pre>
@@ -791,7 +799,7 @@
 <pre class='insert'>+```</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
-<pre class='insert'>+# 1.5.9</pre>
+<pre class='insert'>+# 1.5.10</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
 <pre class='insert'>+</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
@@ -940,13 +948,13 @@
 <pre class='insert'>+git add MODIFICATIONS.html</pre>
 <pre class='undefined'>\ No newline at end of file</pre></div></div><h2>package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/package-lock.json b/package-lock.json</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..de10260</pre>
+<pre class='file'>index 0000000..d895350</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/package-lock.json</pre>
 <pre class='info'>@@ -0,0 +1,5269 @@</pre>
 <pre class='insert'>+{</pre>
 <pre class='insert'>+    "name": "appa-extension-manager",</pre>
-<pre class='insert'>+    "version": "1.5.9",</pre>
+<pre class='insert'>+    "version": "1.5.10",</pre>
 <pre class='insert'>+    "lockfileVersion": 1,</pre>
 <pre class='insert'>+    "requires": true,</pre>
 <pre class='insert'>+    "dependencies": {</pre>
@@ -6216,10 +6224,10 @@
 <pre class='undefined'>similarity index 55%</pre>
 <pre class='undefined'>rename from extension/package.json</pre>
 <pre class='undefined'>rename to package.json</pre>
-<pre class='file'>index 0a63e7b..25b06a2 100644</pre>
+<pre class='file'>index 0a63e7b..52a74da 100644</pre>
 <pre class='delete'>--- a/extension/package.json</pre>
 <pre class='insert'>+++ b/package.json</pre>
-<pre class='info'>@@ -1,48 +1,75 @@</pre>
+<pre class='info'>@@ -1,48 +1,76 @@</pre>
 <pre class='context'> {</pre>
 <pre class='delete'>-    "name": "private-extension-manager",</pre>
 <pre class='insert'>+    "name": "appa-extension-manager",</pre>
@@ -6228,7 +6236,7 @@
 <pre class='delete'>-    "version": "1.5.0",</pre>
 <pre class='delete'>-    "publisher": "garmin",</pre>
 <pre class='delete'>-    "license": "Apache-2.0",</pre>
-<pre class='insert'>+    "version": "1.5.9",</pre>
+<pre class='insert'>+    "version": "1.5.10",</pre>
 <pre class='insert'>+    "engines": {</pre>
 <pre class='insert'>+        "vscode": "^1.55.0"</pre>
 <pre class='insert'>+    },</pre>
@@ -6278,6 +6286,7 @@
 <pre class='insert'>+        "compile": "webpack",</pre>
 <pre class='insert'>+        "watch": "webpack --watch",</pre>
 <pre class='insert'>+        "package": "webpack --mode production --devtool hidden-source-map",</pre>
+<pre class='insert'>+        "postpack": "bash ~/com.appalachia/appa/appa package postpack-vscode",</pre>
 <pre class='insert'>+        "test-compile": "tsc -p ./",</pre>
 <pre class='insert'>+        "test-watch": "tsc -watch -p ./",</pre>
 <pre class='insert'>+        "pretest": "npm run test-compile &amp;&amp; npm run lint",</pre>
@@ -6324,7 +6333,7 @@
 <pre class='context'>     "contributes": {</pre>
 <pre class='context'>         "jsonValidation": [</pre>
 <pre class='context'>             {</pre>
-<pre class='info'>@@ -62,17 +89,17 @@</pre>
+<pre class='info'>@@ -62,17 +90,17 @@</pre>
 <pre class='context'>             "type": "object",</pre>
 <pre class='context'>             "title": "%configuration.title%",</pre>
 <pre class='context'>             "properties": {</pre>
@@ -6345,7 +6354,7 @@
 <pre class='context'>                     "type": "number",</pre>
 <pre class='context'>                     "scope": "machine",</pre>
 <pre class='context'>                     "description": "%configuration.updateCheckInterval.description%",</pre>
-<pre class='info'>@@ -82,48 +109,48 @@</pre>
+<pre class='info'>@@ -82,48 +110,48 @@</pre>
 <pre class='context'>         },</pre>
 <pre class='context'>         "commands": [</pre>
 <pre class='context'>             {</pre>
@@ -6403,7 +6412,7 @@
 <pre class='context'>                 "title": "%command.extension.update.title%",</pre>
 <pre class='context'>                 "icon": {</pre>
 <pre class='context'>                     "light": "media/light/update.svg",</pre>
-<pre class='info'>@@ -131,25 +158,25 @@</pre>
+<pre class='info'>@@ -131,25 +159,25 @@</pre>
 <pre class='context'>                 }</pre>
 <pre class='context'>             },</pre>
 <pre class='context'>             {</pre>
@@ -6434,7 +6443,7 @@
 <pre class='context'>                 "title": "%command.registry.remove.title%",</pre>
 <pre class='context'>                 "category": "%command.category%"</pre>
 <pre class='context'>             }</pre>
-<pre class='info'>@@ -157,152 +184,141 @@</pre>
+<pre class='info'>@@ -157,152 +185,141 @@</pre>
 <pre class='context'>         "viewsContainers": {</pre>
 <pre class='context'>             "activitybar": [</pre>
 <pre class='context'>                 {</pre>
@@ -6633,7 +6642,7 @@
 <pre class='context'>     "devDependencies": {</pre>
 <pre class='context'>         "@types/cacache": "^12.0.1",</pre>
 <pre class='context'>         "@types/chai": "^4.2.14",</pre>
-<pre class='info'>@@ -343,7 +359,7 @@</pre>
+<pre class='info'>@@ -343,7 +360,7 @@</pre>
 <pre class='context'>         "typescript": "^4.1.2",</pre>
 <pre class='context'>         "vsce": "^1.81.1",</pre>
 <pre class='context'>         "vscode-test": "^1.4.1",</pre>
@@ -7264,25 +7273,7 @@
 <pre class='undefined'>rename to tsconfig.json</pre></div></div><h2>extension/webpack.config.js<button class='copy' onclick='navigator.clipboard.writeText("extension/webpack.config.js")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/webpack.config.js b/webpack.config.js</pre>
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/webpack.config.js</pre>
-<pre class='undefined'>rename to webpack.config.js</pre></div></div><h2>xargs.exe.stackdump<button class='copy' onclick='navigator.clipboard.writeText("xargs.exe.stackdump")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/xargs.exe.stackdump b/xargs.exe.stackdump</pre>
-<pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..b2e80f3</pre>
-<pre class='delete'>--- /dev/null</pre>
-<pre class='insert'>+++ b/xargs.exe.stackdump</pre>
-<pre class='info'>@@ -0,0 +1,13 @@</pre>
-<pre class='insert'>+Stack trace:</pre>
-<pre class='insert'>+Frame        Function    Args</pre>
-<pre class='insert'>+000FFFFC168  001800647D1 (000FFFFC388, 00000000002, 000FFFFCE00, 000FFFFDE50)</pre>
-<pre class='insert'>+000FFFFC210  00180066C00 (00000000064, 00000000000, 00000000164, 00000000000)</pre>
-<pre class='insert'>+000FFFFC890  0018014B818 (00000000000, 00000000000, 00000000000, 00000000000)</pre>
-<pre class='insert'>+000FFFFCA60  001801761C9 (0018014D79F, 000000001F5, 001802663DF, 000FFFFCB30)</pre>
-<pre class='insert'>+000FFFFCAA0  0018021A31C (0010040D026, 0010040C0DF, 000000001F5, 001802663DF)</pre>
-<pre class='insert'>+000FFFFCB30  001800435DA (0017CC59190, 000FFFFCBE0, 001801BBDB0, 0017CC50000)</pre>
-<pre class='insert'>+000FFFFCCE0  0010040A0A2 (0018004B08F, 00180049FE0, 00000000000, 00180325C00)</pre>
-<pre class='insert'>+000FFFFCCE0  0018004B0FB (00000000000, 00000000000, 00000000000, 00000000000)</pre>
-<pre class='insert'>+000FFFFCDA0  00180048A2A (00000000000, 00000000000, 00000000000, 00000000000)</pre>
-<pre class='insert'>+000FFFFCE50  00180048AEC (00000000000, 00000000000, 00000000000, 00000000000)</pre>
-<pre class='insert'>+End of stack trace</pre></div></div>
+<pre class='undefined'>rename to webpack.config.js</pre></div></div>
 </div>
 </body>
 </html>
