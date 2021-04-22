@@ -11,6 +11,13 @@
 ## Unreleased
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| ebd2b75 | 2021-04-21 | Chris Schubert | Trying to postpack vsix |
+
+
+ ## Tag: v1.5.9
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 0e42026 | 2021-04-21 | Chris Schubert | 1.5.9 |
 | 455430f | 2021-04-21 | Chris Schubert | Issue with generating vsix |
 
 
