@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.32
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 1cfe17b | 2021-04-23 | Chris Schubert | 1.5.32 |
+| 237c542 | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.31
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
