@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.35
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 7316bfe | 2021-04-23 | Chris Schubert | 1.5.35 |
+| ef36d19 | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.34
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
