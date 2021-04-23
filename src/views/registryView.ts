@@ -42,13 +42,13 @@ export class RegistryView implements Disposable {
         private readonly extensionInfo: ExtensionInfoService,
     ) {
         this.extensionsProvider = new ExtensionsProvider(registryProvider);
-        const extensionsTree = vscode.window.createTreeView('appa-extension-manager.extensions', {
+        const extensionsTree = vscode.window.createTreeView('appaExtensionManager.extensions', {
             treeDataProvider: this.extensionsProvider,
             showCollapseAll: true,
         });
 
         this.recommendedProvider = new RecommendedProvider(registryProvider);
-        const recommendedTree = vscode.window.createTreeView('appa-extension-manager.recommended', {
+        const recommendedTree = vscode.window.createTreeView('appaExtensionManager.recommended', {
             treeDataProvider: this.recommendedProvider,
         });
 
@@ -261,7 +261,7 @@ class ExtensionItem extends BaseItem {
         super(pkg.displayName, vscode.TreeItemCollapsibleState.None);
 
         this.command = {
-            command: 'appa-extension-manager.extension.show',
+            command: 'appaExtensionManager.extension.show',
             title: localize('show.extension', 'Show Extension'),
             arguments: [this.pkg],
         };

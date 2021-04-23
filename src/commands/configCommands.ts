@@ -11,7 +11,7 @@ import { pickWorkspaceFolder } from '../workspace';
  * Opens extensions.private.json to the "registries" element.
  */
 export class ConfigureWorkspaceRegistries implements Command {
-    public readonly id = 'appa-extension-manager.configureWorkspaceRegistries';
+    public readonly id = 'appaExtensionManager.configureWorkspaceRegistries';
 
     public async execute(): Promise<void> {
         await openExtensionsFileToElement('registries');
@@ -22,7 +22,7 @@ export class ConfigureWorkspaceRegistries implements Command {
  * Opens extensions.private.json to the "recommendations" element.
  */
 export class ConfigureRecommendedExtensions implements Command {
-    public readonly id = 'appa-extension-manager.configureRecommendedExtensions';
+    public readonly id = 'appaExtensionManager.configureRecommendedExtensions';
 
     public async execute(): Promise<void> {
         await openExtensionsFileToElement('recommendations');

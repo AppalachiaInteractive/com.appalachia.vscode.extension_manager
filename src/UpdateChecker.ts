@@ -101,7 +101,7 @@ export class UpdateChecker implements Disposable {
     }
 
     private onDidChangeConfiguration(e: vscode.ConfigurationChangeEvent) {
-        if (e.affectsConfiguration('appa-extension-manager.updateCheckInterval')) {
+        if (e.affectsConfiguration('appaExtensionManager.updateCheckInterval')) {
             this.intervalMS = getUpdateIntervalMS();
             this.setAutomaticCheckInterval();
         }
@@ -130,7 +130,7 @@ export class UpdateChecker implements Disposable {
         );
 
         if (response === showUpdates) {
-            await vscode.commands.executeCommand('appa-extension-manager.extensions.focus');
+            await vscode.commands.executeCommand('appaExtensionManager.extensions.focus');
         } else if (response === updateAll) {
             await updateExtensions(this.extensionInfo, updates);
         }

@@ -60,7 +60,7 @@ export class ExtensionInfoService implements vscode.Disposable {
 
         try {
             context.subscriptions.push(
-                vscode.commands.registerCommand('appa-extension-manager.notifyExtensionsChanged', () =>
+                vscode.commands.registerCommand('appaExtensionManager.notifyExtensionsChanged', () =>
                     this._onDidChangeOtherExtension.fire(),
                 ),
             );
@@ -239,7 +239,7 @@ export class ExtensionInfoService implements vscode.Disposable {
         if (vscode.env.remoteName) {
             try {
                 const uiExtension = await vscode.commands.executeCommand<RemoteHelperExtensionInfo>(
-                    '_appa-extension-manager.remoteHelper.getExtension',
+                    '_appaExtensionManager.remoteHelper.getExtension',
                     extensionId,
                 );
 

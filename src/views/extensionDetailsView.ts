@@ -46,7 +46,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
             // Refresh on changes to release channels, as the channel for the
             // displayed extension may have changed.
             vscode.workspace.onDidChangeConfiguration((e) => {
-                if (e.affectsConfiguration('appa-extension-manager.channels')) {
+                if (e.affectsConfiguration('appaExtensionManager.channels')) {
                     this.refresh();
                 }
             }),
@@ -228,7 +228,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                 actions,
                 'prominent update',
                 localize('update.to.version', 'Update to {0}', this.pkg.version.toString()),
-                'appa-extension-manager.extension.update',
+                'appaExtensionManager.extension.update',
                 this.pkg.extensionId,
             );
         }
@@ -238,7 +238,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                 actions,
                 'uninstall',
                 localize('uninstall', 'Uninstall'),
-                'appa-extension-manager.extension.uninstall',
+                'appaExtensionManager.extension.uninstall',
                 this.pkg.extensionId,
             );
 
@@ -250,7 +250,7 @@ export class ExtensionDetailsView extends WebView<ExtensionData> {
                     actions,
                     'channel',
                     localize('extension.channel', 'Channel: {0}', channel),
-                    'appa-extension-manager.extension.switchChannels',
+                    'appaExtensionManager.extension.switchChannels',
                     this.pkg.extensionId,
                 );
             }
@@ -360,7 +360,7 @@ async function addInstallButton(actions: string[], pkg: Package) {
         text = localize('install', 'Install');
     }
 
-    addActionButton(actions, 'install prominent', text, 'appa-extension-manager.extension.install', pkg.extensionId);
+    addActionButton(actions, 'install prominent', text, 'appaExtensionManager.extension.install', pkg.extensionId);
 }
 
 function getLocalResourceRoots() {

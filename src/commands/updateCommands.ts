@@ -2,7 +2,7 @@ import { Command } from '../commandManager';
 import { UpdateChecker } from '../UpdateChecker';
 
 export class CheckForUpdatesCommand implements Command {
-    public readonly id = 'appa-extension-manager.checkForUpdates';
+    public readonly id = 'appaExtensionManager.checkForUpdates';
 
     public constructor(private readonly updateChecker: UpdateChecker) {}
 
@@ -12,7 +12,7 @@ export class CheckForUpdatesCommand implements Command {
 }
 
 export class UpdateAllExtensionsCommand implements Command {
-    public readonly id = 'appa-extension-manager.updateAllExtensions';
+    public readonly id = 'appaExtensionManager.updateAllExtensions';
 
     public constructor(private readonly updateChecker: UpdateChecker) {}
 

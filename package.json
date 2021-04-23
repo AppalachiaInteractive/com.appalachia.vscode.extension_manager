@@ -64,15 +64,15 @@
     ],
     "activationEvents": [
         "workspaceContains:.vscode/extensions.private.json",
-        "onView:appa-extension-manager.extensions",
-        "onView:appa-extension-manager.recommended",
-        "onCommand:appa-extension-manager.cache.delete",
-        "onCommand:appa-extension-manager.cache.garbageCollect",
-        "onCommand:appa-extension-manager.checkForUpdates",
-        "onCommand:appa-extension-manager.configureWorkspaceRegistries",
-        "onCommand:appa-extension-manager.configureRecommendedExtensions",
-        "onCommand:appa-extension-manager.registry.add",
-        "onCommand:appa-extension-manager.registry.remove"
+        "onView:appaExtensionManager.extensions",
+        "onView:appaExtensionManager.recommended",
+        "onCommand:appaExtensionManager.cache.delete",
+        "onCommand:appaExtensionManager.cache.garbageCollect",
+        "onCommand:appaExtensionManager.checkForUpdates",
+        "onCommand:appaExtensionManager.configureWorkspaceRegistries",
+        "onCommand:appaExtensionManager.configureRecommendedExtensions",
+        "onCommand:appaExtensionManager.registry.add",
+        "onCommand:appaExtensionManager.registry.remove"
     ],
     "contributes": {
         "jsonValidation": [
@@ -93,17 +93,17 @@
             "type": "object",
             "title": "%configuration.title%",
             "properties": {
-                "appa-extension-manager.registries": {
+                "appaExtensionManager.registries": {
                     "type": "array",
                     "scope": "machine",
                     "description": "%configuration.registries.description%"
                 },
-                "appa-extension-manager.channels": {
+                "appaExtensionManager.channels": {
                     "type": "object",
                     "scope": "machine",
                     "description": "%configuration.channels.description%"
                 },
-                "appa-extension-manager.updateCheckInterval": {
+                "appaExtensionManager.updateCheckInterval": {
                     "type": "number",
                     "scope": "machine",
                     "description": "%configuration.updateCheckInterval.description%",
@@ -113,48 +113,48 @@
         },
         "commands": [
             {
-                "command": "appa-extension-manager.cache.delete",
+                "command": "appaExtensionManager.cache.delete",
                 "title": "%command.cache.delete.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "appa-extension-manager.cache.garbageCollect",
+                "command": "appaExtensionManager.cache.garbageCollect",
                 "title": "%command.cache.garbageCollect.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "appa-extension-manager.checkForUpdates",
+                "command": "appaExtensionManager.checkForUpdates",
                 "title": "%command.checkForUpdates.title%",
                 "category": "%command.category%"
             },
             {
-                "command": "appa-extension-manager.configureWorkspaceRegistries",
+                "command": "appaExtensionManager.configureWorkspaceRegistries",
                 "title": "%command.configureWorkspaceRegistries.title%",
                 "category": "%command.category%",
                 "icon": "$(edit)"
             },
             {
-                "command": "appa-extension-manager.configureRecommendedExtensions",
+                "command": "appaExtensionManager.configureRecommendedExtensions",
                 "title": "%command.configureRecommendedExtensions.title%",
                 "category": "%command.category%",
                 "icon": "$(edit)"
             },
             {
-                "command": "appa-extension-manager.refresh",
+                "command": "appaExtensionManager.refresh",
                 "title": "%command.refresh.title%",
                 "category": "%command.category%",
                 "icon": "$(refresh)"
             },
             {
-                "command": "appa-extension-manager.extension.install",
+                "command": "appaExtensionManager.extension.install",
                 "title": "%command.extension.install.title%"
             },
             {
-                "command": "appa-extension-manager.extension.uninstall",
+                "command": "appaExtensionManager.extension.uninstall",
                 "title": "%command.extension.uninstall.title%"
             },
             {
-                "command": "appa-extension-manager.extension.update",
+                "command": "appaExtensionManager.extension.update",
                 "title": "%command.extension.update.title%",
                 "icon": {
                     "light": "media/light/update.svg",
@@ -162,25 +162,25 @@
                 }
             },
             {
-                "command": "appa-extension-manager.extension.install.anotherVersion",
+                "command": "appaExtensionManager.extension.install.anotherVersion",
                 "title": "%command.extension.install.anotherVersion.title%"
             },
             {
-                "command": "appa-extension-manager.extension.switchChannels",
+                "command": "appaExtensionManager.extension.switchChannels",
                 "title": "%command.extension.switchChannels.title%"
             },
             {
-                "command": "appa-extension-manager.extension.copyInformation",
+                "command": "appaExtensionManager.extension.copyInformation",
                 "title": "%command.extension.copyInformation.title%"
             },
             {
-                "command": "appa-extension-manager.registry.add",
+                "command": "appaExtensionManager.registry.add",
                 "title": "%command.registry.add.title%",
                 "category": "%command.category%",
                 "icon": "$(new-folder)"
             },
             {
-                "command": "appa-extension-manager.registry.remove",
+                "command": "appaExtensionManager.registry.remove",
                 "title": "%command.registry.remove.title%",
                 "category": "%command.category%"
             }
@@ -188,136 +188,136 @@
         "viewsContainers": {
             "activitybar": [
                 {
-                    "id": "appa-extension-manager",
-                    "title": "%viewsContainers.activitybar.appa-extension-manager.title%",
+                    "id": "appaExtensionManager",
+                    "title": "%viewsContainers.activitybar.appaExtensionManager.title%",
                     "icon": "media/extensions.svg"
                 }
             ]
         },
         "views": {
-            "appa-extension-manager": [
+            "appaExtensionManager": [
                 {
-                    "id": "appa-extension-manager.extensions",
-                    "name": "%views.appa-extension-manager.extensions.name%"
+                    "id": "appaExtensionManager.extensions",
+                    "name": "%views.appaExtensionManager.extensions.name%"
                 },
                 {
-                    "id": "appa-extension-manager.recommended",
-                    "name": "%views.appa-extension-manager.recommended.name%"
+                    "id": "appaExtensionManager.recommended",
+                    "name": "%views.appaExtensionManager.recommended.name%"
                 }
             ]
         },
         "viewsWelcome": [
             {
-                "view": "appa-extension-manager.extensions",
-                "contents": "%views.appa-extension-manager.extensions.noExtensions%"
+                "view": "appaExtensionManager.extensions",
+                "contents": "%views.appaExtensionManager.extensions.noExtensions%"
             },
             {
-                "view": "appa-extension-manager.extensions",
-                "contents": "%views.appa-extension-manager.extensions.configure%",
+                "view": "appaExtensionManager.extensions",
+                "contents": "%views.appaExtensionManager.extensions.configure%",
                 "when": "workbenchState != empty"
             },
             {
-                "view": "appa-extension-manager.recommended",
-                "contents": "%views.appa-extension-manager.recommended.noExtensions%"
+                "view": "appaExtensionManager.recommended",
+                "contents": "%views.appaExtensionManager.recommended.noExtensions%"
             },
             {
-                "view": "appa-extension-manager.recommended",
-                "contents": "%views.appa-extension-manager.recommended.configure%",
+                "view": "appaExtensionManager.recommended",
+                "contents": "%views.appaExtensionManager.recommended.configure%",
                 "when": "workbenchState != empty"
             }
         ],
         "menus": {
             "view/title": [
                 {
-                    "command": "appa-extension-manager.configureWorkspaceRegistries",
-                    "when": "view == appa-extension-manager.extensions && workbenchState != empty",
+                    "command": "appaExtensionManager.configureWorkspaceRegistries",
+                    "when": "view == appaExtensionManager.extensions && workbenchState != empty",
                     "group": "navigation"
                 },
                 {
-                    "command": "appa-extension-manager.refresh",
-                    "when": "view == appa-extension-manager.extensions",
+                    "command": "appaExtensionManager.refresh",
+                    "when": "view == appaExtensionManager.extensions",
                     "group": "navigation"
                 },
                 {
-                    "command": "appa-extension-manager.checkForUpdates",
-                    "when": "view == appa-extension-manager.extensions",
+                    "command": "appaExtensionManager.checkForUpdates",
+                    "when": "view == appaExtensionManager.extensions",
                     "group": "extensions"
                 },
                 {
-                    "command": "appa-extension-manager.registry.add",
-                    "when": "view == appa-extension-manager.extensions",
+                    "command": "appaExtensionManager.registry.add",
+                    "when": "view == appaExtensionManager.extensions",
                     "group": "registry"
                 },
                 {
-                    "command": "appa-extension-manager.configureRecommendedExtensions",
-                    "when": "view == appa-extension-manager.recommended && workbenchState != empty",
+                    "command": "appaExtensionManager.configureRecommendedExtensions",
+                    "when": "view == appaExtensionManager.recommended && workbenchState != empty",
                     "group": "navigation"
                 }
             ],
             "view/item/context": [
                 {
-                    "command": "appa-extension-manager.extension.install",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /available/",
+                    "command": "appaExtensionManager.extension.install",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /available/",
                     "group": "install"
                 },
                 {
-                    "command": "appa-extension-manager.extension.uninstall",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appaExtensionManager.extension.uninstall",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /installed|update/",
                     "group": "install"
                 },
                 {
-                    "command": "appa-extension-manager.extension.update",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /update/",
+                    "command": "appaExtensionManager.extension.update",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /update/",
                     "group": "inline"
                 },
                 {
-                    "command": "appa-extension-manager.extension.install.anotherVersion",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appaExtensionManager.extension.install.anotherVersion",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /installed|update/",
                     "group": "installVersion"
                 },
                 {
-                    "command": "appa-extension-manager.extension.switchChannels",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /installed|update/",
+                    "command": "appaExtensionManager.extension.switchChannels",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /installed|update/",
                     "group": "installVersion"
                 },
                 {
-                    "command": "appa-extension-manager.extension.copyInformation",
-                    "when": "view =~ /^appa-extension-manager/ && viewItem =~ /extension/",
+                    "command": "appaExtensionManager.extension.copyInformation",
+                    "when": "view =~ /^appaExtensionManager/ && viewItem =~ /extension/",
                     "group": "other"
                 },
                 {
-                    "command": "appa-extension-manager.registry.remove",
-                    "when": "view == appa-extension-manager.extensions && viewItem == registry.user",
+                    "command": "appaExtensionManager.registry.remove",
+                    "when": "view == appaExtensionManager.extensions && viewItem == registry.user",
                     "group": "registries"
                 }
             ],
             "commandPalette": [
                 {
-                    "command": "appa-extension-manager.refresh",
+                    "command": "appaExtensionManager.refresh",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.install",
+                    "command": "appaExtensionManager.extension.install",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.uninstall",
+                    "command": "appaExtensionManager.extension.uninstall",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.update",
+                    "command": "appaExtensionManager.extension.update",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.install.anotherVersion",
+                    "command": "appaExtensionManager.extension.install.anotherVersion",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.switchChannels",
+                    "command": "appaExtensionManager.extension.switchChannels",
                     "when": "false"
                 },
                 {
-                    "command": "appa-extension-manager.extension.copyInformation",
+                    "command": "appaExtensionManager.extension.copyInformation",
                     "when": "false"
                 }
             ]

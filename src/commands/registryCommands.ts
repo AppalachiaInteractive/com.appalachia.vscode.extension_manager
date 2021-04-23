@@ -9,7 +9,7 @@ import { RegistryProvider } from '../RegistryProvider';
 const localize = nls.loadMessageBundle();
 
 export class AddUserRegistryCommand implements Command {
-    public readonly id = 'appa-extension-manager.registry.add';
+    public readonly id = 'appaExtensionManager.registry.add';
 
     public constructor(private readonly registryProvider: RegistryProvider) {}
 
@@ -43,7 +43,7 @@ export class AddUserRegistryCommand implements Command {
         await vscode.window.showInformationMessage(
             localize(
                 'registry.added',
-                'Registry "{0}" added. {1} and edit "appa-extension-manager.registries" to configure authentication or other settings.',
+                'Registry "{0}" added. {1} and edit "appaExtensionManager.registries" to configure authentication or other settings.',
                 name,
                 settingsJsonLink,
             ),
@@ -52,7 +52,7 @@ export class AddUserRegistryCommand implements Command {
 }
 
 export class RemoveUserRegistryCommand implements Command {
-    public readonly id = 'appa-extension-manager.registry.remove';
+    public readonly id = 'appaExtensionManager.registry.remove';
 
     public constructor(private readonly registryProvider: RegistryProvider) {}
 

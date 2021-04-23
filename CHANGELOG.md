@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.38
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 955bac0 | 2021-04-23 | Chris Schubert | 1.5.38 |
+| 6ae010e | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.37
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|

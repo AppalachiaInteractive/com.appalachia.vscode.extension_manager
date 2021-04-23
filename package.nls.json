@@ -18,11 +18,11 @@
     "command.extension.switchChannels.title": "Switch Release Channels...",
     "command.registry.add.title": "Add User Registry...",
     "command.registry.remove.title": "Remove User Registry",
-    "viewsContainers.activitybar.appa-extension-manager.title": "Private Extensions",
-    "views.appa-extension-manager.extensions.name": "Extensions",
-    "views.appa-extension-manager.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/tree/master/#readme)",
-    "views.appa-extension-manager.extensions.configure": "[Configure Workspace Registries](command:appa-extension-manager.configureWorkspaceRegistries)",
-    "views.appa-extension-manager.recommended.name": "Recommended",
-    "views.appa-extension-manager.recommended.noExtensions": "No recommended extensions found.",
-    "views.appa-extension-manager.recommended.configure": "[Configure Recommended Extensions](command:appa-extension-manager.configureRecommendedExtensions)"
+    "viewsContainers.activitybar.appaExtensionManager.title": "Private Extensions",
+    "views.appaExtensionManager.extensions.name": "Extensions",
+    "views.appaExtensionManager.extensions.noExtensions": "No private extensions found. [learn more](https://github.com/AppalachiaInteractive/com.appalachia.vscode.extension_manager/tree/master/#readme)",
+    "views.appaExtensionManager.extensions.configure": "[Configure Workspace Registries](command:appaExtensionManager.configureWorkspaceRegistries)",
+    "views.appaExtensionManager.recommended.name": "Recommended",
+    "views.appaExtensionManager.recommended.noExtensions": "No recommended extensions found.",
+    "views.appaExtensionManager.recommended.configure": "[Configure Recommended Extensions](command:appaExtensionManager.configureRecommendedExtensions)"
 }

@@ -177,7 +177,7 @@ export class RegistryProvider implements Disposable {
         assertType(
             userRegistries,
             t.array(UserRegistry),
-            localize('user.setting.invalid', 'appa-extension-manager.registries setting is invalid'),
+            localize('user.setting.invalid', 'appaExtensionManager.registries setting is invalid'),
         );
 
         return userRegistries;
@@ -200,8 +200,8 @@ export class RegistryProvider implements Disposable {
 
     private onDidChangeConfiguration(e: vscode.ConfigurationChangeEvent) {
         if (
-            e.affectsConfiguration('appa-extension-manager.registries') ||
-            e.affectsConfiguration('appa-extension-manager.channels')
+            e.affectsConfiguration('appaExtensionManager.registries') ||
+            e.affectsConfiguration('appaExtensionManager.channels')
         ) {
             this.isStale = true;
             this._onDidChangeRegistries.fire();

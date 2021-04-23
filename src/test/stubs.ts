@@ -73,7 +73,7 @@ export class CommonStubs implements vscode.Disposable {
      * Stubs `vscode.extension.getExtension()` for a given extension ID so it
      * returns that the extension is not installed on the remote machine (where the
      * extension manager runs), then stubs the
-     * `_appa-extension-manager.remoteHelper.getExtension` command so it returns
+     * `_appaExtensionManager.remoteHelper.getExtension` command so it returns
      * data from the given mock data object.
      *
      * You must also use `stubRemoteName()` so the extension appears to be
@@ -99,7 +99,7 @@ export class CommonStubs implements vscode.Disposable {
         this.getExtensionStub.withArgs(extensionId).returns(undefined);
 
         this.executeCommandStub
-            .withArgs('_appa-extension-manager.remoteHelper.getExtension', extensionId)
+            .withArgs('_appaExtensionManager.remoteHelper.getExtension', extensionId)
             .resolves(result);
     }
 }
