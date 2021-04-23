@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.37
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| ed85b31 | 2021-04-23 | Chris Schubert | 1.5.37 |
+| 64df000 | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.36
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
