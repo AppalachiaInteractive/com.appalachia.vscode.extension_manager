@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.34
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 38ef016 | 2021-04-23 | Chris Schubert | 1.5.34 |
+| a7039a4 | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.33
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
