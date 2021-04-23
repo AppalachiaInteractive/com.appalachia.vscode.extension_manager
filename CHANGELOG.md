@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.42
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 3e04b3a | 2021-04-23 | Chris Schubert | 1.5.42 |
+| 54850e8 | 2021-04-23 | Chris Schubert | Changing display name |
+
+
  ## Tag: v1.5.41
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
