@@ -1,6 +1,6 @@
 {
     "name": "appa-extension-manager",
-    "displayName": "Private Extension Manager",
+    "displayName": "Appalachia Interactive Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
     "version": "1.5.41",
     "engines": {
