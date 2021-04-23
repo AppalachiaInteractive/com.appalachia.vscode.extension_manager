@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.36
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| bfe369e | 2021-04-23 | Chris Schubert | 1.5.36 |
+| 39cecd0 | 2021-04-23 | Chris Schubert | Changing packaging logic for npm vs vscode packages |
+
+
  ## Tag: v1.5.35
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
