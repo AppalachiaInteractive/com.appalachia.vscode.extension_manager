@@ -2,7 +2,7 @@
     "name": "appa-extension-manager",
     "displayName": "Private Extension Manager",
     "description": "Manages extensions hosted in private NPM registries.",
-    "version": "1.5.21",
+    "version": "1.5.22",
     "engines": {
         "vscode": "^1.55.0"
     },
