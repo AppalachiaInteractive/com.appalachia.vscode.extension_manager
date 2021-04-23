@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.30
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| 400c00d | 2021-04-23 | Chris Schubert | 1.5.30 |
+| 60f90b2 | 2021-04-23 | Chris Schubert | Testing package releasse |
+
+
  ## Tag: v1.5.29
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
