@@ -13,6 +13,13 @@
 |------|------|--------|---------|
 
 
+ ## Tag: v1.5.40
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
+| c49c10c | 2021-04-23 | Chris Schubert | 1.5.40 |
+| 4923122 | 2021-04-23 | Chris Schubert | Fixing vscodeignore |
+
+
  ## Tag: v1.5.39
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|

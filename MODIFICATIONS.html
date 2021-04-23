@@ -163,32 +163,23 @@
 <pre class='undefined'>similarity index 100%</pre>
 <pre class='undefined'>rename from extension/.vscode/tasks.json</pre>
 <pre class='undefined'>rename to .vscode/tasks.json</pre></div></div><h2>extension/.vscodeignore<button class='copy' onclick='navigator.clipboard.writeText("extension/.vscodeignore")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/extension/.vscodeignore b/.vscodeignore</pre>
-<pre class='undefined'>similarity index 80%</pre>
+<pre class='undefined'>similarity index 94%</pre>
 <pre class='undefined'>rename from extension/.vscodeignore</pre>
 <pre class='undefined'>rename to .vscodeignore</pre>
-<pre class='file'>index 1ecbc63..ac10597 100644</pre>
+<pre class='file'>index 1ecbc63..bf0f3fa 100644</pre>
 <pre class='delete'>--- a/extension/.vscodeignore</pre>
 <pre class='insert'>+++ b/.vscodeignore</pre>
-<pre class='info'>@@ -1,3 +1,14 @@</pre>
-<pre class='insert'>+.dist</pre>
-<pre class='insert'>+.env</pre>
-<pre class='insert'>+.private</pre>
-<pre class='insert'>+.test</pre>
-<pre class='insert'>+.venv</pre>
-<pre class='insert'>+.vscode-test</pre>
-<pre class='insert'>+*.vsix</pre>
+<pre class='info'>@@ -1,3 +1,5 @@</pre>
 <pre class='insert'>+*/.private/*</pre>
-<pre class='insert'>+dist</pre>
-<pre class='insert'>+node_modules</pre>
-<pre class='insert'>+out</pre>
+<pre class='insert'>+private</pre>
 <pre class='context'> # Ignore vscode settings for development</pre>
 <pre class='context'> .vscode/**</pre>
 <pre class='context'> </pre></div></div><h2>CHANGELOG.md<button class='copy' onclick='navigator.clipboard.writeText("CHANGELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/CHANGELOG.md b/CHANGELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..239284f</pre>
+<pre class='file'>index 0000000..28eda6a</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/CHANGELOG.md</pre>
-<pre class='info'>@@ -0,0 +1,383 @@</pre>
+<pre class='info'>@@ -0,0 +1,390 @@</pre>
 <pre class='insert'>+```</pre>
 <pre class='insert'>+ ________   ___  ___   ________   ________    ________   _______    ________      </pre>
 <pre class='insert'>+|\   ____\ |\  \|\  \ |\   __  \ |\   ___  \ |\   ____\ |\  ___ \  |\   ____\     </pre>
@@ -202,6 +193,13 @@
 <pre class='insert'>+## Unreleased</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+</pre>
+<pre class='insert'>+ ## Tag: v1.5.40</pre>
+<pre class='insert'>+| Hash | Date | Author | Changes |</pre>
+<pre class='insert'>+|------|------|--------|---------|</pre>
+<pre class='insert'>+| c49c10c | 2021-04-23 | Chris Schubert | 1.5.40 |</pre>
+<pre class='insert'>+| 4923122 | 2021-04-23 | Chris Schubert | Fixing vscodeignore |</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+ ## Tag: v1.5.39</pre>
@@ -962,7 +960,7 @@
 <pre class='insert'>+extension will not transmit any data beyond what is necessary to establish the</pre>
 <pre class='insert'>+connection. The extension will not transmit any data back to Garmin.</pre></div></div><h2>RELEASELOG.md<button class='copy' onclick='navigator.clipboard.writeText("RELEASELOG.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/RELEASELOG.md b/RELEASELOG.md</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..3cce4b0</pre>
+<pre class='file'>index 0000000..f52a1b7</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/RELEASELOG.md</pre>
 <pre class='info'>@@ -0,0 +1,14 @@</pre>
@@ -976,7 +974,7 @@
 <pre class='insert'>+```</pre>
 <pre class='insert'>+</pre>
 <pre class='insert'>+</pre>
-<pre class='insert'>+# 1.5.39</pre>
+<pre class='insert'>+# 1.5.40</pre>
 <pre class='insert'>+| Hash | Date | Author | Changes |</pre>
 <pre class='insert'>+|------|------|--------|---------|</pre>
 <pre class='insert'>+</pre></div></div><h2>SETUP.md<button class='copy' onclick='navigator.clipboard.writeText("SETUP.md")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/SETUP.md b/SETUP.md</pre>
@@ -1125,13 +1123,13 @@
 <pre class='insert'>+git add MODIFICATIONS.html</pre>
 <pre class='undefined'>\ No newline at end of file</pre></div></div><h2>package-lock.json<button class='copy' onclick='navigator.clipboard.writeText("package-lock.json")'>copy path</button></h2><div class='file-diff'><div><pre class='file'>diff --git a/package-lock.json b/package-lock.json</pre>
 <pre class='undefined'>new file mode 100644</pre>
-<pre class='file'>index 0000000..3bbd43f</pre>
+<pre class='file'>index 0000000..7067536</pre>
 <pre class='delete'>--- /dev/null</pre>
 <pre class='insert'>+++ b/package-lock.json</pre>
 <pre class='info'>@@ -0,0 +1,5269 @@</pre>
 <pre class='insert'>+{</pre>
 <pre class='insert'>+    "name": "appa-extension-manager",</pre>
-<pre class='insert'>+    "version": "1.5.39",</pre>
+<pre class='insert'>+    "version": "1.5.40",</pre>
 <pre class='insert'>+    "lockfileVersion": 1,</pre>
 <pre class='insert'>+    "requires": true,</pre>
 <pre class='insert'>+    "dependencies": {</pre>
@@ -6401,7 +6399,7 @@
 <pre class='undefined'>similarity index 51%</pre>
 <pre class='undefined'>rename from extension/package.json</pre>
 <pre class='undefined'>rename to package.json</pre>
-<pre class='file'>index 0a63e7b..cae57b1 100644</pre>
+<pre class='file'>index 0a63e7b..2629329 100644</pre>
 <pre class='delete'>--- a/extension/package.json</pre>
 <pre class='insert'>+++ b/package.json</pre>
 <pre class='info'>@@ -1,48 +1,79 @@</pre>
@@ -6413,7 +6411,7 @@
 <pre class='delete'>-    "version": "1.5.0",</pre>
 <pre class='delete'>-    "publisher": "garmin",</pre>
 <pre class='delete'>-    "license": "Apache-2.0",</pre>
-<pre class='insert'>+    "version": "1.5.39",</pre>
+<pre class='insert'>+    "version": "1.5.40",</pre>
 <pre class='insert'>+    "engines": {</pre>
 <pre class='insert'>+        "vscode": "^1.55.0"</pre>
 <pre class='insert'>+    },</pre>
