@@ -52,10 +52,10 @@
         "postpublish": "bash ~/com.appalachia/appa/appa package vscode postpublish",
         "lint": "bash ~/com.appalachia/appa/appa package vscode lint",
         "compile": "bash ~/com.appalachia/appa/appa package vscode compile",
-        "watch": "bash ~/com.appalachia/appa/appa package vscode watch",
+        "watch": "webpack --watch",
         "test": "bash ~/com.appalachia/appa/appa package vscode test",
         "test-compile": "bash ~/com.appalachia/appa/appa package vscode test_compile",
-        "test-watch": "bash ~/com.appalachia/appa/appa package vscode test_watch"
+        "test-watch": "tsc -watch -p ./"
     },
     "main": "./dist/extension.js",
     "extensionKind": [
